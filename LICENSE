@@ -1,21 +1,30 @@
-MIT License
+Commercial License Agreement for Joone (Nonprofit)
 
-Copyright (c) 2023 Joone
+This Commercial License Agreement ("Agreement") is made and entered into on the date of acceptance by the Licensee ("Effective Date") by and between Joone, a tax-exempt nonprofit organization recognized under section 501(c) of the Internal Revenue Code ("Licensor"), and the Licensee, the individual or organization that has accepted the terms of this Agreement ("Licensee").
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+WHEREAS, Licensor owns all right, title and interest in and to the software known as Joone ("Software") and desires to grant to Licensee a license to use the Software; and
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+WHEREAS, Licensee desires to obtain a license to use the Software;
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+NOW, THEREFORE, in consideration of the mutual covenants and agreements contained herein, and for other good and valuable consideration, the receipt and sufficiency of which are hereby acknowledged, the parties agree as follows:
+
+License Grant. Subject to the terms and conditions of this Agreement, Licensor hereby grants to Licensee a non-exclusive, non-transferable, non-sublicensable, revocable license to use the Software solely for Licensee's internal nonprofit purposes. The license granted herein is limited to the Software hosted on the URL https://junebugs.app.
+
+Restrictions. Licensee shall not (i) sublicense, sell, rent, lease, transfer, assign, or otherwise dispose of the Software; (ii) modify, translate, adapt, or create derivative works based on the Software; (iii) reverse engineer, decompile, or disassemble the Software or attempt to discover the source code of the Software; (iv) use the Software to provide services to third parties; (v) use the Software in any manner that violates any applicable laws, regulations, or third-party rights; or (vi) remove or alter any copyright or other proprietary notices contained in the Software.
+
+Fee Waiver. As a 501(c) tax-exempt nonprofit organization, Licensor hereby waives any fees associated with the license granted herein.
+
+Ownership. Licensee acknowledges that Licensor owns all right, title, and interest in and to the Software, including all intellectual property rights therein. This Agreement does not grant Licensee any ownership interest in the Software or any right to use Licensor's trademarks or other intellectual property.
+
+Confidentiality. Licensee shall treat the Software as confidential information and shall not disclose the Software to any third party without Licensor's prior written consent. Licensee shall use commercially reasonable efforts to protect the Software from unauthorized disclosure or use.
+
+Warranty Disclaimer. LICENSOR MAKES NO WARRANTIES, EXPRESS OR IMPLIED, WITH RESPECT TO THE SOFTWARE, INCLUDING WITHOUT LIMITATION, ANY IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NONINFRINGEMENT OF THIRD-PARTY RIGHTS.
+
+Limitation of Liability. IN NO EVENT SHALL LICENSOR BE LIABLE TO LICENSEE OR ANY THIRD PARTY FOR ANY INDIRECT, CONSEQUENTIAL, INCIDENTAL, SPECIAL, OR PUNITIVE DAMAGES ARISING OUT OF OR RELATED TO THIS AGREEMENT OR THE USE OF THE SOFTWARE, EVEN IF LICENSOR HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. LICENSOR'S TOTAL LIABILITY FOR ALL CLAIMS ARISING OUT OF OR RELATED TO THIS AGREEMENT SHALL BE LIMITED TO THE AMOUNTS PAID BY LICENSEE TO LICENSOR FOR THE LICENSE GRANTED HEREIN.
+
+Termination. This Agreement shall terminate automatically if Licensee breaches any of its terms and conditions. Upon termination of this Agreement, Licensee shall immediately cease all use of the Software and shall delete all copies of the Software in its possession or control.
+
+Governing Law. This Agreement shall be governed by and construed in accordance with the laws of the state of California, without regard
+
+
+
