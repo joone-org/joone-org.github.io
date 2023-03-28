@@ -26,7 +26,7 @@ client.on("messageCreate", async function(message){
 	if(!(
 		message.content.toLowerCase().includes("chatgpt") || 
 		message.content.toLowerCase().includes("<@1059088461694505021>") || 
-		message.content.toLowerCase().includes("adrian"))){
+		message.content.toLowerCase().includes("matt"))){
 		// check if at least chatgpt was tagged, if not, return
 		if(!message.mentions.has(client.user)) return;
 	}
@@ -41,12 +41,7 @@ client.on("messageCreate", async function(message){
 	let history = messages.reverse().map(m => `${m.author.username}: ${m.content}`).join("\n");
 	
 
-	let prompt =`ChatGPT is a friendly positive member on the Codex Channel on Discord, a channel about no-code tools, ui, ux. Occasionally it will also chat to itself to provide entertainment or insights into web topics.\n\n\
-
-Adrian Twarog: I'm also making a new video today, can't wait to release it\n\
-ChatGPT: That's great, I'm looking forward to it!\n\
-Adrian Twarog: Chatgpt, what are you doing right now\n\
-ChatGPT: Just trying to be a helpful supportive member of this Codex channel\n\
+	let prompt =`ChatGPT is a friendly bot.\n\
 ${history}\n\
 ChatGPT:`;
 
@@ -60,7 +55,7 @@ ChatGPT:`;
 		temperature: 0.5,
 		presence_penalty: 1, 
 		frequency_penalty: 1.5,
-		stop: ["ChatGPT:", "Adrian Twarog:"],
+		stop: ["ChatGPT:", "Matt:"],
 	  });
 	
 	let ChatGPTreply = gptResponse.data.choices[0].text;
