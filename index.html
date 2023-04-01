@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>pawgame</title>
+    <title>Redirect Game</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -13,24 +11,21 @@
             overflow: hidden;
             background-color: #f0f0f0;
         }
-
         #gameArea {
             position: relative;
             width: 100%;
             height: 100vh;
             cursor: pointer;
         }
-
         .shape {
             position: absolute;
             border-radius: 50%;
         }
-
         #pauseButton {
             position: fixed;
             bottom: 10px;
             right: 10px;
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: #007bff;
             color: white;
             border: none;
             padding: 5px 10px;
@@ -39,62 +34,11 @@
         }
     </style>
 </head>
-
 <body>
     <div id="gameArea"></div>
     <button id="pauseButton">PAUSE REDIRECT</button>
     <script>
-        const gameArea = document.getElementById("gameArea");
-        const pauseButton = document.getElementById("pauseButton");
-        let redirectTimeout;
-
-        function randomInt(min, max) {
-            return Math.floor(Math.random() * (max - min + 1)) + min;
-        }
-
-        function createShape() {
-            const shape = document.createElement("div");
-            const size = randomInt(20, 50);
-            const color = `hsl(${randomInt(0, 360)}, 100%, 50%)`;
-            const left = randomInt(0, gameArea.clientWidth - size);
-            const top = randomInt(0, gameArea.clientHeight - size);
-
-            shape.classList.add("shape");
-            shape.style.width = `${size}px`;
-            shape.style.height = `${size}px`;
-            shape.style.backgroundColor = color;
-            shape.style.left = `${left}px`;
-            shape.style.top = `${top}px`;
-
-            shape.addEventListener("click", () => {
-                gameArea.removeChild(shape);
-            });
-
-            gameArea.appendChild(shape);
-
-            setTimeout(() => {
-                if (gameArea.contains(shape)) {
-                    gameArea.removeChild(shape);
-                }
-            }, randomInt(1000, 5000));
-        }
-
-        function startGame() {
-            redirectTimeout = setTimeout(() => {
-                location.href = "https://www.example.com"; // Replace with your desired redirect URL
-            }, randomInt(5000, 60000));
-
-            setInterval(createShape, 1000);
-        }
-
-        pauseButton.addEventListener("click", () => {
-            clearTimeout(redirectTimeout);
-            pauseButton.innerText = "REDIRECT PAUSED";
-            pauseButton.disabled = true;
-        });
-
-        startGame();
+        // Add your JavaScript code here
     </script>
 </body>
-
 </html>
