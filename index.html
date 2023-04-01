@@ -1,20 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WordTris</title>
-  <style>
-    /* Add your CSS styles here */
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            overflow: hidden;
+            background-color: #f0f0f0;
+        }
+        #gameArea {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            cursor: pointer;
+        }
+        .shape {
+            position: absolute;
+            border-radius: 50%;
+        }
+        #pauseButton {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-  <div id="game-container">
-    <!-- Game elements go here -->
-  </div>
-  <button id="pause-redirect">PAUSE REDIRECT</button>
-  <script>
-    // Add your JavaScript code here
-  </script>
+    <div id="gameArea"></div>
+    <button id="pauseButton">PAUSE REDIRECT</button>
+    <script>
+        // Add your JavaScript code here
+    </script>
 </body>
 </html>
