@@ -38,7 +38,57 @@
     <div id="gameArea"></div>
     <button id="pauseButton">PAUSE REDIRECT</button>
     <script>
-        // Add your JavaScript code here
+        const gameArea = document.getElementById("gameArea");
+const pauseButton = document.getElementById("pauseButton");
+let redirectTimeout;
+
+function randomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function createShape() {
+    const shape = document.createElement("div");
+    const size = randomInt(20, 50);
+    const color = `hsl(${randomInt(0, 360)}, 100%, 50%)`;
+    const left = randomInt(0, gameArea.clientWidth - size);
+    const top = randomInt(0, gameArea.clientHeight - size);
+
+    shape.classList.add("shape");
+    shape.style.width = `${size}px`;
+    shape.style.height = `${size}px`;
+    shape.style.backgroundColor = color;
+    shape.style.left = `${left}px`;
+    shape.style.top = `${top}px`;
+
+    shape.addEventListener("click", () => {
+        gameArea.removeChild(shape);
+    });
+
+    gameArea.appendChild(shape);
+
+    setTimeout(() => {
+        if (gameArea.contains(shape)) {
+            gameArea.removeChild(shape);
+        }
+    }, randomInt(1000, 5000));
+}
+
+function startGame() {
+    redirectTimeout = setTimeout(() => {
+        location.href = "https://www.example.com"; // Replace with your desired redirect URL
+    }, randomInt(5000, 60000));
+
+    setInterval(createShape, 1000);
+}
+
+pauseButton.addEventListener("click", () => {
+    clearTimeout(redirectTimeout);
+    pauseButton.innerText = "REDIRECT PAUSED";
+    pauseButton.disabled = true;
+});
+
+startGame();
+
     </script>
 </body>
 </html>
