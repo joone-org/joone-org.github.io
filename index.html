@@ -12,72 +12,49 @@
             background-color: #000000;
         }
 
-   #gameArea {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    cursor: pointer;
-    background-color: #000000; /* Set the background color of the game area to black */
-}
+        #gameArea {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            cursor: pointer;
+            background-color: #000000; /* Set the background color of the game area to black */
+        }
 
-@keyframes gradientColor {
-  0% {
-    color: hsl(0, 100%, 50%);
-  }
-  50% {
-    color: hsl(180, 100%, 50%);
-  }
-  100% {
-    color: hsl(360, 100%, 50%);
-  }
-}
+        @keyframes movePaw {
+            0% {
+                transform: translate(0, 0);
+            }
+            50% {
+                transform: translate(50vw, 50vh);
+            }
+            100% {
+                transform: translate(0, 0);
+            }
+        }
 
-@keyframes movePaw {
-  0% {
-    transform: translate(0, 0);
-  }
-  50% {
-    transform: translate(50vw, 50vh);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
-}
+        .shape {
+            position: absolute;
+            animation: movePaw 5s infinite linear;
+        }
 
-.shape {
-  animation: gradientColor 5s infinite linear;
-}
+        .paw {
+            font-family: Arial, sans-serif;
+            cursor: pointer;
+            animation: gradientColor 5s infinite linear;
+            transform-origin: center center;
+        }
 
-.paw {
-  font-family: Arial, sans-serif;
-  position: absolute;
-  cursor: pointer;
-  animation: movePaw 5s infinite linear, gradientColor 5s infinite linear;
-}
-
-.paw:nth-child(1) {
-  color: #ff0000; /* Set the color of the first paw to red */
-}
-
-.paw:nth-child(2) {
-  color: #00ff00; /* Set the color of the second paw to green */
-}
-
-.paw:nth-child(3) {
-  color: #0000ff; /* Set the color of the third paw to blue */
-}
-
-#pauseButton {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    background-color: black;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-}
+        #pauseButton {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
 
     </style>
 </head>
@@ -85,66 +62,70 @@
     <div id="gameArea"></div>
     <button id="pauseButton">PAUSE REDIRECT</button>
     <script>
-       const gameArea = document.getElementById("gameArea");
-const pauseButton = document.getElementById("pauseButton");
-let redirectTimeout;
+        const gameArea = document.getElementById("gameArea");
+        const pauseButton = document.getElementById("pauseButton");
+        let redirectTimeout;
 
-function randomInt(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
-function createShape() {
-    const shape = document.createElement("div");
-    const paw = document.createElement("span");
-    const size = randomInt(20, 50);
-    const left = randomInt(0, gameArea.clientWidth - size);
-    const top = randomInt(0, gameArea.clientHeight - size);
-
-    shape.classList.add("shape");
-    shape.style.width = `${size}px`;
-    shape.style.height = `${size}px`;
-    shape.style.left = `${left}px`;
-    shape.style.top = `${top}px`;
-    shape.style.position = 'absolute';
-
-    paw.classList.add("paw");
-    paw.style.fontSize = `${size}px`;
-    paw.style.lineHeight = `${size}px`;
-    paw.style.textAlign = 'center';
-    paw.textContent = '🐾'; // Set the content to the cat paw print emoji
-
-    shape.appendChild(paw);
-
-    shape.addEventListener("click",     () => {
-        gameArea.removeChild(shape);
-    });
-
-    gameArea.appendChild(shape);
-
-    setTimeout(() => {
-        if (gameArea.contains(shape)) {
-            gameArea.removeChild(shape);
+        function randomInt(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
         }
-    }, randomInt(1000, 5000));
-}
 
-function startGame() {
-    redirectTimeout = setTimeout(() => {
-        location.href = "https://junebugs.notion.site/"; // Replace with your desired redirect URL
-    }, randomInt(5000, 60000));
+        function createShape() {
+            const shape = document.createElement("div");
+            const paw = document.createElement("span");
+            const size = randomInt(20, 50);
+            const left = randomInt(0, gameArea.clientWidth - size);
+            const top = randomInt(0, gameArea.clientHeight - size);
+            const hue = randomInt(0, 360); // generate random hue value between 0 and 360
 
-    setInterval(createShape, 1000);
-}
+            shape.classList.add("shape");
+            shape.style.width = `${size}px`;
+            shape.style.height = `${size}px`;
+            shape.style.left = `${left}px`;
+            shape.style.top = `${top}px`;
 
-pauseButton.addEventListener("click", () => {
-    clearTimeout(redirectTimeout);
-    pauseButton.innerText = "REDIRECT PAUSED";
-    pauseButton.disabled = true;
-});
+            paw.classList.add("paw");
+            paw.style.fontSize = `${size}px`;
+            paw.style.lineHeight = `${size}px`;
+            paw.style.textAlign = 'center';
+            paw.textContent = '🐾'; // Set the content to the cat paw print emoji
+            paw.style.color = `hsl(${hue}, 100%, 50%)`; // Set the color of the paw using the generated hue value
 
-startGame();
+            shape.appendChild(paw);
+
+            shape.addEventListener("click", () => {
+                gameArea.removeChild(shape);
+            });
+
+            gameArea.appendChild(shape);
+
+            setTimeout(() => {
+                if (gameArea.contains(shape)) {
+                    gameArea.removeChild(shape);
+                }
+            }, randomInt(1000, 5000));
+        }
+
+        function startGame() {
+            redirectTimeout = setTimeout(() => {
+                location.href = "https://junebugs.notion.site/"; // Replace with your desired redirect URL
+            }, random
+        function startGame() {
+            redirectTimeout = setTimeout(() => {
+                location.href = "https://junebugs.notion.site/"; // Replace with your desired redirect URL
+            }, randomInt(5000, 60000));
+
+            setInterval(createShape, 1000);
+        }
+
+        pauseButton.addEventListener("click", () => {
+            clearTimeout(redirectTimeout);
+            pauseButton.innerText = "REDIRECT PAUSED";
+            pauseButton.disabled = true;
+        });
+
+        startGame();
 
     </script>
 </body>
 </html>
-
