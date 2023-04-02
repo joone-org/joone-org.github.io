@@ -20,6 +20,7 @@
         }
         .shape {
             position: absolute;
+            user-select: none;
         }
 
         #pauseButton {
@@ -33,94 +34,63 @@
             border-radius: 5px;
             cursor: pointer;
         }
-
-        @keyframes gradientAnimation {
-            0% {
-                background: linear-gradient(45deg, #ff0000, #ffff00);
-            }
-            50% {
-                background: linear-gradient(45deg, #ff00ff, #00ffff);
-            }
-            100% {
-                background: linear-gradient(45deg, #ff0000, #ffff00);
-            }
-        }
-
-        .paw {
-            width: 50px;
-            height: 50px;
-            fill: url(#gradient);
-            animation: gradientAnimation 5s infinite;
-        }
     </style>
 </head>
 <body>
     <div id="gameArea"></div>
     <button id="pauseButton">PAUSE REDIRECT</button>
-    <script>
-       const gameArea = document.getElementById("gameArea");
-        const pauseButton = document.getElementById("pauseButton");
-        let redirectTimeout;
 
-        function randomInt(min, max) {
-            return Math.floor(Math.random() * (max - min + 1)) + min;
+const gameArea = document.getElementById("gameArea");
+const pauseButton = document.getElementById("pauseButton");
+let redirectTimeout;
+
+function randomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function createShape() {
+    const shape = document.createElement("div");
+    const size = randomInt(20, 50);
+    const color = `hsl(${randomInt(0, 360)}, 100%, 50%)`;
+    const fontSize = `${size}px`;
+    const left = randomInt(0, gameArea.clientWidth - size);
+    const top = randomInt(0, gameArea.clientHeight - size);
+
+    shape.classList.add("shape");
+    shape.style.fontSize = fontSize;
+    shape.style.color = color;
+    shape.style.left = `${left}px`;
+    shape.style.top = `${top}px`;
+    shape.textContent = "🐾";
+
+    shape.addEventListener("click", () => {
+        gameArea.removeChild(shape);
+    });
+
+    gameArea.appendChild(shape);
+
+    setTimeout(() => {
+        if (gameArea.contains(shape)) {
+            gameArea.removeChild(shape);
         }
+    }, randomInt(1000, 5000));
+}
 
-        function createPawSVG() {
-            const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-            svg.innerHTML = `
-            <defs>
-                <linearGradient id="gradient">
-                    <stop offset="5%" stop-color="#ff0000"/>
-                    <stop offset="95%" stop-color="#ffff00"/>
-                </linearGradient>
-            </defs>
-            <path class="paw" d="M25,0c6.627,0,12,5.373,12,12c0,4.97-3.582,9.373-8.418,11.32C29.482,22.949,29.975,23.5,30,24.5 c1.362,5.5-2.8,12-5,12c-2.2,0-6.362-6.5-5-12c0.025-1,0.518-1.551,1.418-1.18C16.582,21.373,13,16.97,13,12C13,5.373,18.373,0,25,0L25,0z"/>
-            `;
-            return svg;
-        }
+function startGame() {
+    redirectTimeout = setTimeout(() => {
+        location.href = "https://www.example.com"; // Replace with your desired redirect URL
+    }, randomInt(5000, 60000));
 
-        function createShape() {
-            const shape = createPawSVG();
-            const size = randomInt(20, 50);
-            const left = randomInt(0, gameArea.clientWidth - size);
-            const top = randomInt(0, gameArea.clientHeight - size);
+    setInterval(createShape, 1000);
+}
 
-            shape.classList.add("shape");
-            shape.style.width = `${size}px`;
-            shape.style.height = `${size}px`;
-            shape.style.left = `${left}px`;
-            shape.style.top = `${top}px`;
+pauseButton.addEventListener("click", () => {
+    clearTimeout(redirectTimeout);
+    pauseButton.innerText = "REDIRECT PAUSED";
+    pauseButton.disabled = true;
+});
 
-            shape.addEventListener("click", () => {
-                gameArea.removeChild(shape);
-            });
+startGame();
 
-            gameArea.appendChild(shape);
-
-            setTimeout(() => {
-                if (gameArea.contains(shape)) {
-                    gameArea.removeChild(shape);
-                }
-            }, randomInt(1000, 5000));
-        }
-
-        function startGame() {
-            redirectTimeout = setTimeout(() => {
-                location.href = "https://www.example.com"; // Replace with your desired redirect URL
-            }, randomInt(5000, 60000));
-
-            setInterval(createShape, 1000);
-        }
-
-        pauseButton.addEventListener("click", () => {
-            clearTimeout(redirectTimeout);
-            pauseButton.innerText = "REDIRECT PAUSED";
-            pauseButton.disabled = true;
-        });
-
-        startGame();
-
-    </script>
 </body>
 </html>
