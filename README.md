@@ -6,4 +6,5 @@ At Joone, we believe that education is the key to unlocking human potential, and
 <br><br>
 ```
 console.log("Accessible, Objective, EdTech");
+
 © CC-BY-NC-ND.  Joone 501(c)(3).
