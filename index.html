@@ -72,6 +72,7 @@ function randomInt(min, max) {
 
 function createShape() {
     const shape = document.createElement("div");
+    const paw = document.createElement("span");
     const size = randomInt(20, 50);
     const left = randomInt(0, gameArea.clientWidth - size);
     const top = randomInt(0, gameArea.clientHeight - size);
@@ -79,12 +80,17 @@ function createShape() {
     shape.classList.add("shape");
     shape.style.width = `${size}px`;
     shape.style.height = `${size}px`;
-    shape.style.fontSize = `${size}px`;
-    shape.style.lineHeight = `${size}px`;
     shape.style.left = `${left}px`;
     shape.style.top = `${top}px`;
-    shape.style.textAlign = 'center';
-    shape.textContent = '🐾'; // Set the content to the cat paw print emoji
+    shape.style.position = 'absolute';
+
+    paw.classList.add("paw");
+    paw.style.fontSize = `${size}px`;
+    paw.style.lineHeight = `${size}px`;
+    paw.style.textAlign = 'center';
+    paw.textContent = '🐾'; // Set the content to the cat paw print emoji
+
+    shape.appendChild(paw);
 
     shape.addEventListener("click", () => {
         gameArea.removeChild(shape);
@@ -98,6 +104,7 @@ function createShape() {
         }
     }, randomInt(1000, 5000));
 }
+
 
 
 
