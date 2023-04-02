@@ -32,6 +32,18 @@
   }
 }
 
+@keyframes movePaw {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(50vw, 50vh);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
 .shape {
   animation: gradientColor 5s infinite linear;
 }
@@ -40,9 +52,20 @@
   font-family: Arial, sans-serif;
   position: absolute;
   cursor: pointer;
-  animation: gradientColor 5s infinite linear;
+  animation: movePaw 5s infinite linear, gradientColor 5s infinite linear;
 }
 
+.paw:nth-child(1) {
+  color: #ff0000; /* Set the color of the first paw to red */
+}
+
+.paw:nth-child(2) {
+  color: #00ff00; /* Set the color of the second paw to green */
+}
+
+.paw:nth-child(3) {
+  color: #0000ff; /* Set the color of the third paw to blue */
+}
 
 #pauseButton {
     position: fixed;
@@ -92,7 +115,7 @@ function createShape() {
 
     shape.appendChild(paw);
 
-    shape.addEventListener("click", () => {
+    shape.addEventListener("click",     () => {
         gameArea.removeChild(shape);
     });
 
@@ -104,9 +127,6 @@ function createShape() {
         }
     }, randomInt(1000, 5000));
 }
-
-
-
 
 function startGame() {
     redirectTimeout = setTimeout(() => {
@@ -127,3 +147,4 @@ startGame();
     </script>
 </body>
 </html>
+
