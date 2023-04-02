@@ -20,10 +20,22 @@
     background-color: #000000; /* Set the background color of the game area to black */
 }
 
-        .shape {
-            position: absolute;
-            border-radius: 50%;
-        }
+@keyframes gradientColor {
+  0% {
+    color: hsl(0, 100%, 50%);
+  }
+  50% {
+    color: hsl(180, 100%, 50%);
+  }
+  100% {
+    color: hsl(360, 100%, 50%);
+  }
+}
+
+.shape {
+  animation: gradientColor 5s infinite linear;
+}
+
 
 #pauseButton {
     position: fixed;
