@@ -1,4 +1,5 @@
 console.log("Accessible, Objective, EdTech");
+<br>
 © CC-BY-NC-ND.  Joone 501(c)(3).
 
 Joone is a pioneering technology company dedicated to revolutionizing the educational landscape by creating intelligent, accessible, and personalized learning experiences. Our mission is to empower students, educators, and institutions with cutting-edge assistive technology that harnesses the power of artificial intelligence (AI) to bridge learning gaps and unlock each individual's full potential.
