@@ -21,6 +21,7 @@
         .shape {
             position: absolute;
             user-select: none;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
         }
 
         #pauseButton {
@@ -33,7 +34,6 @@
             padding: 5px 10px;
             border-radius: 5px;
             cursor: pointer;
-            z-index: 100; /* Add this line */
         }
     </style>
 </head>
@@ -51,7 +51,7 @@
     
         function createShape() {
             const shape = document.createElement("span");
-            const size = randomInt(50, 400);
+            const size = randomInt(50, 500);
             const color1 = `hsl(${randomInt(0, 360)}, 100%, 50%)`;
             const color2 = `hsl(${randomInt(0, 360)}, 100%, 50%)`;
             const fontSize = `${size}px`;
@@ -75,7 +75,7 @@
                 if (pawTouched) {
                     setTimeout(() => {
                         location.href = "https://junebugs.notion.site/";
-                    }, randomInt(1, 1000));
+                    }, randomInt(1, 1500));
                 }
             });
 
