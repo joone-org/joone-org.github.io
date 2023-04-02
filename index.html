@@ -44,6 +44,11 @@
             cursor: pointer;
         }
     </style>
+    <script>
+        if (typeof navigator.serviceWorker !== 'undefined') {
+          navigator.serviceWorker.register('pwabuilder-sw.js')
+        }
+      </script>
 </head>
 <body>
     <div id="gameArea"></div>

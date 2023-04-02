@@ -1,0 +1,30 @@
+{
+  "name": "Joone",
+  "short_name": "Joone",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#000000",
+  "background_color": "#000000",
+  "display": "fullscreen",
+  "description": "Joone is a pioneering technology company dedicated to revolutionizing the educational landscape by creating intelligent, accessible, and personalized learning experiences. Our mission is to empower students, educators, and institutions with cutting-edge assistive technology that harnesses the power of artificial intelligence (AI) to bridge learning gaps and unlock each individual's full potential.",
+  "start_url": "https://junebugs.app",
+  "dir": "auto",
+  "lang": "en",
+  "orientation": "any",
+  "display_override": [
+    "fullscreen"
+  ],
+  "categories": [
+    "education"
+  ]
+}
