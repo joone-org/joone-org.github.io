@@ -11,51 +11,16 @@
             overflow: hidden;
             background-color: #000000;
         }
-
         #gameArea {
             position: relative;
             width: 100%;
             height: 100vh;
             cursor: pointer;
-            background-color: #000000; /* Set the background color of the game area to black */
+            background-color: #000000;
         }
-
-        @keyframes movePaw {
-            0% {
-                transform: translate(0, 0);
-            }
-            50% {
-                transform: translate(50vw, 50vh);
-            }
-            100% {
-                transform: translate(0, 0);
-            }
-        }
-
         .shape {
             position: absolute;
-            animation: movePaw 5s infinite linear;
         }
-
-        .paw {
-  font-family: Arial, sans-serif;
-  position: absolute;
-  cursor: pointer;
-  animation: movePaw 5s infinite linear, gradientColor 5s infinite linear;
-}
-
-.paw:nth-child(1) {
-  color: #ff0000; /* Set the color of the first paw to red */
-}
-
-.paw:nth-child(2) {
-  color: #00ff00; /* Set the color of the second paw to green */
-}
-
-.paw:nth-child(3) {
-  color: #0000ff; /* Set the color of the third paw to blue */
-}
-
 
         #pauseButton {
             position: fixed;
@@ -69,13 +34,31 @@
             cursor: pointer;
         }
 
+        @keyframes gradientAnimation {
+            0% {
+                background: linear-gradient(45deg, #ff0000, #ffff00);
+            }
+            50% {
+                background: linear-gradient(45deg, #ff00ff, #00ffff);
+            }
+            100% {
+                background: linear-gradient(45deg, #ff0000, #ffff00);
+            }
+        }
+
+        .paw {
+            width: 50px;
+            height: 50px;
+            fill: url(#gradient);
+            animation: gradientAnimation 5s infinite;
+        }
     </style>
 </head>
 <body>
     <div id="gameArea"></div>
     <button id="pauseButton">PAUSE REDIRECT</button>
     <script>
-        const gameArea = document.getElementById("gameArea");
+       const gameArea = document.getElementById("gameArea");
         const pauseButton = document.getElementById("pauseButton");
         let redirectTimeout;
 
@@ -83,51 +66,48 @@
             return Math.floor(Math.random() * (max - min + 1)) + min;
         }
 
+        function createPawSVG() {
+            const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+            svg.innerHTML = `
+            <defs>
+                <linearGradient id="gradient">
+                    <stop offset="5%" stop-color="#ff0000"/>
+                    <stop offset="95%" stop-color="#ffff00"/>
+                </linearGradient>
+            </defs>
+            <path class="paw" d="M25,0c6.627,0,12,5.373,12,12c0,4.97-3.582,9.373-8.418,11.32C29.482,22.949,29.975,23.5,30,24.5 c1.362,5.5-2.8,12-5,12c-2.2,0-6.362-6.5-5-12c0.025-1,0.518-1.551,1.418-1.18C16.582,21.373,13,16.97,13,12C13,5.373,18.373,0,25,0L25,0z"/>
+            `;
+            return svg;
+        }
+
         function createShape() {
-  const shape = document.createElement("div");
-  const paw = document.createElement("span");
-  const size = randomInt(20, 50);
-  const left = randomInt(0, gameArea.clientWidth - size);
-  const top = randomInt(0, gameArea.clientHeight - size);
-  const hue = randomInt(0, 360); // generate random hue value between 0 and 360
+            const shape = createPawSVG();
+            const size = randomInt(20, 50);
+            const left = randomInt(0, gameArea.clientWidth - size);
+            const top = randomInt(0, gameArea.clientHeight - size);
 
-  shape.classList.add("shape");
-  shape.style.width = `${size}px`;
-  shape.style.height = `${size}px`;
-  shape.style.left = `${left}px`;
-  shape.style.top = `${top}px`;
-  shape.style.position = 'absolute';
+            shape.classList.add("shape");
+            shape.style.width = `${size}px`;
+            shape.style.height = `${size}px`;
+            shape.style.left = `${left}px`;
+            shape.style.top = `${top}px`;
 
-  paw.classList.add("paw");
-  paw.style.fontSize = `${size}px`;
-  paw.style.lineHeight = `${size}px`;
-  paw.style.textAlign = 'center';
-  paw.textContent = '🐾'; // Set the content to the cat paw print emoji
-  paw.style.color = `hsl(${hue}, 100%, 50%)`; // Set the color of the paw using the generated hue value
+            shape.addEventListener("click", () => {
+                gameArea.removeChild(shape);
+            });
 
-  shape.appendChild(paw);
+            gameArea.appendChild(shape);
 
-  shape.addEventListener("click", () => {
-    gameArea.removeChild(shape);
-  });
-
-  gameArea.appendChild(shape);
-
-  setTimeout(() => {
-    if (gameArea.contains(shape)) {
-      gameArea.removeChild(shape);
-    }
-  }, randomInt(1000, 5000));
-}
-
+            setTimeout(() => {
+                if (gameArea.contains(shape)) {
+                    gameArea.removeChild(shape);
+                }
+            }, randomInt(1000, 5000));
+        }
 
         function startGame() {
             redirectTimeout = setTimeout(() => {
-                location.href = "https://junebugs.notion.site/"; // Replace with your desired redirect URL
-            }, random
-        function startGame() {
-            redirectTimeout = setTimeout(() => {
-                location.href = "https://junebugs.notion.site/"; // Replace with your desired redirect URL
+                location.href = "https://www.example.com"; // Replace with your desired redirect URL
             }, randomInt(5000, 60000));
 
             setInterval(createShape, 1000);
