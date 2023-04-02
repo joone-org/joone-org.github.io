@@ -54,16 +54,19 @@ function randomInt(min, max) {
 function createShape() {
     const shape = document.createElement("div");
     const size = randomInt(20, 50);
-    const color = `hsl(${randomInt(0, 360)}, 100%, 50%)`;
     const left = randomInt(0, gameArea.clientWidth - size);
     const top = randomInt(0, gameArea.clientHeight - size);
 
     shape.classList.add("shape");
     shape.style.width = `${size}px`;
     shape.style.height = `${size}px`;
-    shape.style.backgroundColor = color;
+    shape.style.fontSize = `${size}px`;
+    shape.style.lineHeight = `${size}px`;
+    shape.style.color = `hsl(${randomInt(0, 360)}, 100%, 50%)`;
     shape.style.left = `${left}px`;
     shape.style.top = `${top}px`;
+    shape.style.textAlign = 'center';
+    shape.textContent = '🐾'; // Set the content to the cat paw print emoji
 
     shape.addEventListener("click", () => {
         gameArea.removeChild(shape);
@@ -77,6 +80,7 @@ function createShape() {
         }
     }, randomInt(1000, 5000));
 }
+
 
 function startGame() {
     redirectTimeout = setTimeout(() => {
