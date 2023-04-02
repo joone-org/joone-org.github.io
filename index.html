@@ -38,11 +38,24 @@
         }
 
         .paw {
-            font-family: Arial, sans-serif;
-            cursor: pointer;
-            animation: gradientColor 5s infinite linear;
-            transform-origin: center center;
-        }
+  font-family: Arial, sans-serif;
+  position: absolute;
+  cursor: pointer;
+  animation: movePaw 5s infinite linear, gradientColor 5s infinite linear;
+}
+
+.paw:nth-child(1) {
+  color: #ff0000; /* Set the color of the first paw to red */
+}
+
+.paw:nth-child(2) {
+  color: #00ff00; /* Set the color of the second paw to green */
+}
+
+.paw:nth-child(3) {
+  color: #0000ff; /* Set the color of the third paw to blue */
+}
+
 
         #pauseButton {
             position: fixed;
@@ -71,40 +84,42 @@
         }
 
         function createShape() {
-            const shape = document.createElement("div");
-            const paw = document.createElement("span");
-            const size = randomInt(20, 50);
-            const left = randomInt(0, gameArea.clientWidth - size);
-            const top = randomInt(0, gameArea.clientHeight - size);
-            const hue = randomInt(0, 360); // generate random hue value between 0 and 360
+  const shape = document.createElement("div");
+  const paw = document.createElement("span");
+  const size = randomInt(20, 50);
+  const left = randomInt(0, gameArea.clientWidth - size);
+  const top = randomInt(0, gameArea.clientHeight - size);
+  const hue = randomInt(0, 360); // generate random hue value between 0 and 360
 
-            shape.classList.add("shape");
-            shape.style.width = `${size}px`;
-            shape.style.height = `${size}px`;
-            shape.style.left = `${left}px`;
-            shape.style.top = `${top}px`;
+  shape.classList.add("shape");
+  shape.style.width = `${size}px`;
+  shape.style.height = `${size}px`;
+  shape.style.left = `${left}px`;
+  shape.style.top = `${top}px`;
+  shape.style.position = 'absolute';
 
-            paw.classList.add("paw");
-            paw.style.fontSize = `${size}px`;
-            paw.style.lineHeight = `${size}px`;
-            paw.style.textAlign = 'center';
-            paw.textContent = '🐾'; // Set the content to the cat paw print emoji
-            paw.style.color = `hsl(${hue}, 100%, 50%)`; // Set the color of the paw using the generated hue value
+  paw.classList.add("paw");
+  paw.style.fontSize = `${size}px`;
+  paw.style.lineHeight = `${size}px`;
+  paw.style.textAlign = 'center';
+  paw.textContent = '🐾'; // Set the content to the cat paw print emoji
+  paw.style.color = `hsl(${hue}, 100%, 50%)`; // Set the color of the paw using the generated hue value
 
-            shape.appendChild(paw);
+  shape.appendChild(paw);
 
-            shape.addEventListener("click", () => {
-                gameArea.removeChild(shape);
-            });
+  shape.addEventListener("click", () => {
+    gameArea.removeChild(shape);
+  });
 
-            gameArea.appendChild(shape);
+  gameArea.appendChild(shape);
 
-            setTimeout(() => {
-                if (gameArea.contains(shape)) {
-                    gameArea.removeChild(shape);
-                }
-            }, randomInt(1000, 5000));
-        }
+  setTimeout(() => {
+    if (gameArea.contains(shape)) {
+      gameArea.removeChild(shape);
+    }
+  }, randomInt(1000, 5000));
+}
+
 
         function startGame() {
             redirectTimeout = setTimeout(() => {
