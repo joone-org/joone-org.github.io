@@ -97,7 +97,7 @@ function updateScore() {
         pawTouched = true;
         gameArea.removeChild(shape);
         score++;
-        scoreDisplay.textContent = `Score: ${score}`;
+        scoreDisplay.textContent = `${score}`;
 
         if (pawTouched && redirectEnabled) {
             setTimeout(() => {
