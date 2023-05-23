@@ -13,33 +13,97 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <style>
+        :root {
+            --primary-color: #333;
+            --secondary-color: #666666;
+            --highlight-color: #007BFF; 
+            --background-color: #f5f5f5;
+            --white-color: #ffffff;
+            --shadow-color: rgba(0, 0, 0, 0.1);
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            color: #333;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
+            color: var(--primary-color);
             max-width: 800px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 2em;
+            background-color: var(--background-color);
         }
+
         h1, h2, h3 {
-            color: #444;
+            color: var(--secondary-color);
+            transition: color 0.3s ease;
         }
+
         h1 {
-            margin-bottom: 20px;
+            font-size: 2.2em;
+            margin-bottom: 1em;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
         }
+
         h2 {
-            margin-top: 40px;
-            margin-bottom: 20px;
+            font-size: 1.8em;
+            margin-top: 2em;
+            margin-bottom: 1em;
+            text-transform: uppercase;
         }
+
+        h3 {
+            font-size: 1.5em;
+            margin-top: 1.5em;
+            margin-bottom: 0.5em;
+        }
+
         p {
-            margin-bottom: 20px;
+            margin-bottom: 1em;
+            text-indent: 2em;
+            text-align: justify;
+            background-color: var(--white-color);
+            padding: 1em;
+            border-radius: 5px;
+            box-shadow: 0 0 10px var(--shadow-color);
         }
+
+        ol {
+            margin-bottom: 1em;
+        }
+
+        h1:hover, h2:hover, h3:hover {
+            color: var(--highlight-color);
+        }
+        .title {
+    font-size: 2.2em;
+    margin-bottom: 0;
+}
+
+.title a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.title a:hover {
+    color: var(--highlight-color);
+}
+
+
+.subtitle {
+    font-size: 0.8em;
+    color: var(--secondary-color);
+}
+
+
     </style>
-    <script>
-    </script>
 </head>
 <body>
-    <h1>LLAM-AI: Revolutionizing K-12 Education Through Personalized AI Tutoring</h1>
+    <h1>
+        <div class="title"><a href="https://junebugs.notion.site/35866a81e5aa4dcf8b056f9375bef9be?v=3f3faf1de15d484aa6420cbcec2bd415">Joone</a></div>
+        <div class="subtitle">501(c)(3) © CC-BY-NC-ND</div>
+    </h1>
+    
+
     <h2>Introduction</h2>
     <p>In the digital era, the educational landscape is rapidly evolving. The advent of Artificial Intelligence (AI) offers unprecedented opportunities to transform the learning experience, making it more personalized, engaging, and flexible. This white paper presents LLAM-AI, a revolutionary AI tutoring platform designed to enhance K-12 education.</p>
     <h2>Problem Statement</h2>
