@@ -4,41 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joone Platform Policy</title>
-      <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            padding: 10px;
-        }
+  <style>
+    :root {
+        --primary-color: #333;
+        --secondary-color: #4d4d4d;
+        --highlight-color: #007BFF;
+        --background-color: #f5f5f5;
+        --white-color: #ffffff;
+        --shadow-color: rgba(0, 0, 0, 0.1);
+    }
 
-        header {
-            background-color: #f8f9fa;
-            padding: 10px;
-            margin-bottom: 20px;
-            text-align: center;
-        }
+    body {
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        line-height: 1.6;
+        color: var(--primary-color);
+        padding: 2em;
+        background-color: var(--background-color);
+    }
 
-        h1, h2 {
-            color: #007bff;
-        }
+    header {
+        background-color: var(--background-color);
+        padding: 2em;
+        margin-bottom: 2em;
+        text-align: center;
+    }
 
-        main {
-            max-width: 800px;
-            margin: 0 auto;
-        }
+    h1, h2 {
+        color: var(--secondary-color);
+        transition: color 0.3s ease;
+    }
 
-        p, li {
-            font-size: 18px;
-        }
+    h1 {
+        font-size: 1.65em;
+        margin-bottom: 0.5em;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
 
-        footer {
-            background-color: #f8f9fa;
-            padding: 10px;
-            text-align: center;
-            margin-top: 20px;
-        }
-    </style>
+    h2 {
+        font-size: 1.35em;
+        margin-top: 1.5em;
+        margin-bottom: 0.75em;
+        text-transform: uppercase;
+    }
+
+    main {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    p, li {
+        margin-bottom: 1em;
+        text-indent: 2em;
+        text-align: justify;
+        background-color: var(--white-color);
+        padding: 1em;
+        border-radius: 5px;
+        box-shadow: 0 0 10px var(--shadow-color);
+        font-size: 1em;
+    }
+
+    footer {
+        background-color: var(--background-color);
+        padding: 2em;
+        text-align: center;
+        margin-top: 2em;
+    }
+
+    h1:hover, h2:hover {
+        color: var(--highlight-color);
+    }
+</style>
+
 </head>
   
 <body>
