@@ -27,10 +27,10 @@
         background-color: #ffffff;
     }
     .shape {
-        position: absolute;
-        user-select: none;
-        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
-    }
+    position: absolute;
+    user-select: none;
+    text-shadow: 2px 2px 10px rgba(0, 208, 255, 0.322);  
+}
     #topRightContainer {
         position: fixed;
         top: 10px;
@@ -40,32 +40,27 @@
         align-items: center;
         gap: 10px;
     }
-    #score {
-        background-color: #8b8b8b;
-        border: 2px solid #0d0d0d;
-        border-radius: 5px;
-        padding: 5px 10px;
-        color: #000;
-        font-size: 1.2em;
-    }
-    button {
-        background-color: #555;
-        border: 2px solid #0d0d0d;
-        border-radius: 5px;
-        padding: 5px 10px;
-        color: #fff;
-        font-size: 1.5em;
-        outline: none;
-        cursor: pointer;
-        transition: background-color 0.2s ease;
-    }
-    button:hover {
-        background-color: #888;
-    }
-    button:active {
-        background-color: #333;
-        transform: translateY(2px);
-    }
+    #score, button {
+    font-family: 'Arial', sans-serif;
+    color: white;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.264);
+    background: linear-gradient(to right, hsl(0, 100%, 75%), hsl(360, 100%, 75%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+button:active {
+    transform: scale(0.9);
+}
     </style>
     <script>
         if (typeof navigator.serviceWorker !== 'undefined') {
@@ -95,7 +90,7 @@
     function setInitialRedirectTimeout() {
         initialRedirectTimeout = setTimeout(() => {
             location.href = "https://joone-org.notion.site";
-        }, 6000);
+        }, 5000);
     }
 
     setInitialRedirectTimeout();
@@ -115,22 +110,23 @@
         const shape = document.createElement("i");
         shape.classList.add("fas", "fa-paw");
         const size = randomInt(25, 125);
-        const color1 = `hsl(${randomInt(0, 360)}, 100%, 50%)`;
-        const color2 = `hsl(${randomInt(0, 360)}, 100%, 50%)`;
+        const color1 = `hsl(${randomInt(0, 360)}, 100%, 75%)`;
+        const color2 = `hsl(${randomInt(0, 360)}, 100%, 75%)`; 
         const fontSize = `${size}px`;
         const left = randomInt(0, gameArea.clientWidth - size);
         const top = randomInt(0, gameArea.clientHeight - size);
         const rotation = randomInt(0, 360);
 
         shape.classList.add("shape");
-        shape.style.fontSize = fontSize;
-        shape.style.color = "black";
-        shape.style.left = `${left}px`;
-        shape.style.top = `${top}px`;
-        shape.style.webkitTextFillColor = "transparent";
-        shape.style.webkitBackgroundClip = "text";
-        shape.style.backgroundImage = `linear-gradient(${color1}, ${color2})`;
-        shape.style.transform = `rotate(${rotation}deg)`;
+shape.style.fontSize = fontSize;
+shape.style.color = "white";
+shape.style.left = `${left}px`;
+shape.style.top = `${top}px`;
+shape.style.webkitTextFillColor = "transparent";
+shape.style.webkitBackgroundClip = "text";
+shape.style.backgroundImage = `linear-gradient(${color1}, ${color2})`;
+shape.style.transform = `rotate(${rotation}deg)`;
+shape.style.textShadow = "2px 2px 10px rgba(255, 0, 0, 0.6)";
 
         shape.addEventListener("click", () => {
             clearTimeout(initialRedirectTimeout);
