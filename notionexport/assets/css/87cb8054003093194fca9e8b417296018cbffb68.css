@@ -484,6 +484,9 @@ mention token. */
 .notion-cursor-pointer {
     cursor: pointer
     }
+.notion-topbar {
+        display: none !important;
+    }
 .notion-sidebar-container, .notion-topbar {
     cursor: default
     }

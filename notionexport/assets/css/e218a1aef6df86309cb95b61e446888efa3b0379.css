@@ -6,6 +6,9 @@ html, body, #notion-app {
     padding: 0 !important;
     margin: 0 !important
     }
+.notion-topbar {
+        display: none !important;
+    }   
 .notion-help-button, .notion-print-ignore, .notion-overlay-container, .notion-sidebar-container, .notion-presence-container, .notion-topbar, .notion-topbar-export-popup, .notion-selectable-halo, .notion-help-button, .notion-page-controls {
     display: none !important
     }
