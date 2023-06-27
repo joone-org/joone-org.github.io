@@ -4,19 +4,16 @@ We are a 501(c)(3) non-profit organization devoted to providing educational assi
 # [🌱](https://www.figma.com/file/cJoBjCunCySAbjRsfJ2wpb/Joone-Timeline?type=whiteboard&node-id=0%3A1&t=cnXcZFLV5yraOcam-1)  Our Initiatives
 🧭 [**Cognitive Navigators**]():  Our AI-powered tutors are designed to adjust both curriculum content and website material to match the reading and comprehension abilities of each student. At the same time, they embody the playful personas of popular figures to make the learning experience more engaging. Expertly blending with existing educational systems, these tutors work to enhance and personalize each student's learning journey.
 
-🧩 [**Curriculum**]():  Our curriculum is a free, open-source solution designed to blend [core academics](https://github.com/joone-org/SentioNova/wiki/California-Graduation-Requirements) with [career and technical education paths](https://github.com/joone-org/SentioNova/wiki/Career-Technical-Education-(CTE)-Pathways) to guide students on their journey towards specific career choices. Developed with [community contributions,](https://github.com/joone-org/SentioNova/wiki) our content is continuously updated by a global community focused on inclusivity and equity. We're reshaping the future of education, making it more relevant, engaging, and accessible for all.
+🧩 [**Curriculum**]():  Our curriculum is a free, open-source solution designed to blend [core academics](https://github.com/joone-org/SentioNova/wiki/California-Graduation-Requirements) with [career and technical education paths](https://github.com/joone-org/SentioNova/wiki/Career-Technical-Education-(CTE)-Pathways) to guide students on their journey towards specific career choices. Developed by [community contributions](https://github.com/joone-org/curriculum.joone.org/wiki) our content is continuously updated by a global community focused on inclusivity and equity. We're reshaping the future of education, making it more relevant, engaging, and accessible for all.
 
 🕹️ **[Immersive Labs](https://hubs.mozilla.com/TNxtsuH/otis)**:  We assist districts and staff in deploying [Mozilla Hubs Cloud](https://hubs.mozilla.com/cloud), which hosts dynamic, interactive three-dimensional spaces where students can engage with [Cognitive Navigators](Joone%20b1ca1308cebc41b79813e31d258b6976/Cognitive%20Navigators%202f4d5bc97a0841d8af647646799358cf.md) and [SentioNova](https://sentionova.joone.org/), fostering creativity and critical thinking through an innovative approach to learning.
-
-
+<br><br>
 # 🏹  Mission
 Joone's mission is to democratize K-12 education by creating and distributing free, open-source curricula. We are committed to fostering educational consistency and quality across the globe through interactive learning experiences and cutting-edge research. Our goal is to ensure every child, regardless of their location or circumstances, has access to personalized and high-quality education.
-
-
+<br><br>
 # 🔭  Vision
 We envision a world where every child, regardless of their socio-economic background, geographic location, or personal circumstances, has equal access to high-quality, personalized K-12 education. Through our innovative platform and open-source curricula, we aim to transform the educational landscape, making interactive and research-backed learning the norm, not the exception.
-
-
+<br><br>
 # 🌳  Values
 ### Inclusivity
 We believe in equal access to education for all. Our platform is designed to be accessible and user-friendly, accommodating diverse learning styles and needs. We offer multi-language support and special education resources to ensure every learner can benefit from our tools.
@@ -41,25 +38,19 @@ We ensure our practices are sustainable. Our platform is free, making quality ed
 
 ### Adaptability
 We understand the dynamic nature of the educational landscape. Our platform is designed to be flexible and responsive, adjusting learning paths in real-time based on student progress. We also regularly update our platform to keep pace with technological advancements, evolving teaching methodologies, and shifting societal contexts.
-
-
+<br><br>
 # 📬  Support
-For most support needs, please start with [**GitHub Discussions**](https://github.com/orgs/joone-org/discussions/categories/support-forums).<br>For urgent inquiries requiring immediate resolution, contact us via our [**Service Desk**](https://joone-org.atlassian.net/servicedesk/customer/portals).
+For most support needs, please start with [**GitHub Discussions**](https://github.com/orgs/joone-org/discussions/categories/support-forums).<br>For urgent inquiries requiring immediate resolution, contact us via our [**Service Desk**](https://joone-org.atlassian.net/servicedesk/customer/portals).<br>
 
-
-## 🔍  Sitemap
-📦 
-🧸 [Donations](https://donate.stripe.com/7sI2bC6Ii9cWcSc8wy)
-🚀 [Cointribute via Crypto](https://commerce.coinbase.com/checkout/86bfde49-9ac9-4df3-8fa5-d02014836574)
-💰 Joone’s EIN is 92-3556562
-
-
+We truly appreciate all 🧸 [Donations](https://donate.stripe.com/7sI2bC6Ii9cWcSc8wy), 🚀 [Coin-tributions](https://commerce.coinbase.com/checkout/86bfde49-9ac9-4df3-8fa5-d02014836574), and 🙌 [Volunteers](https://github.com/joone-org/curriculum.joone.org/wiki) as we take on this extraordianry task.
+<br><br>
 ## 📜  Legal
-[Acceptable Use](https://joone.org/legal.html#use)
-[Accessibility](https://joone.org/legal.html#accessibility)
-[Cookies](https://joone.org/legal.html#cookies)
-[COPPA](https://joone.org/legal.html#coppa)
-[Data Processing](https://joone.org/legal.html#data)
-[DMCA](https://joone.org/legal.html#dmca)
-[Privacy Policy](https://joone.org/legal.html#privacy)
-[Terms of Service](https://joone.org/legal.html#terms)
+[Acceptable Use](https://joone.org/legal.html#use)<br>
+[Accessibility](https://joone.org/legal.html#accessibility)<br>
+[Cookies](https://joone.org/legal.html#cookies)<br>
+[COPPA](https://joone.org/legal.html#coppa)<br>
+[Data Processing](https://joone.org/legal.html#data)<br>
+[DMCA](https://joone.org/legal.html#dmca)<br>
+[Privacy Policy](https://joone.org/legal.html#privacy)<br>
+[Terms of Service](https://joone.org/legal.html#terms)<br>
+Joone's EIN is 92-3556562
