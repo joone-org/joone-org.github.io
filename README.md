@@ -1,20 +1,19 @@
-# Joone 501(c)(3)
-We are a non-profit organization devoted to providing educational assistive technologies and curricula to disadvantaged youth worldwide.
-
+# Joone
+We are a 501(c)(3) non-profit organization devoted to providing educational assistive technologies and curricula to disadvantaged youth worldwide.
+<br><br>
 # [🌱](https://www.figma.com/file/cJoBjCunCySAbjRsfJ2wpb/Joone-Timeline?type=whiteboard&node-id=0%3A1&t=cnXcZFLV5yraOcam-1)  Our Initiatives
-🧩 [**Curriculum**](https://github.com/joone-org/curriculum.joone.org):  We develop a free, open-source K-12 solution that seamlessly combines [core academics](https://github.com/joone-org/curriculum.joone.org/wiki/California-Graduation-Requirements) with [career and technical education paths](https://github.com/joone-org/curriculum.joone.org/wiki/Career-Technical-Education-(CTE)-Pathways). With an emphasis on college and career readiness, our approach is diverse, inclusive, and equitable. All content, contributed by a [global community](https://github.com/joone-org/curriculum.joone.org/wiki), is hosted on [GitHub](https://github.com/joone-org/intro-to-github), written in [markdown](https://github.com/joone-org/intro-to-markdown), and designed for integration with your [Learning Management System (LMS)](https://en.wikipedia.org/wiki/Learning_management_system).
+🧩 [**Curriculum**](https://github.com/joone-org/curriculum.joone.org):  We develop free, open-source K-12 curricula that seamlessly combines [core academics](https://github.com/joone-org/curriculum.joone.org/wiki/California-Graduation-Requirements) with [career and technical education paths](https://github.com/joone-org/curriculum.joone.org/wiki/Career-Technical-Education-(CTE)-Pathways). With an emphasis on college and career readiness, our approach is diverse, inclusive, and equitable. All content, contributed by a [global community](https://github.com/joone-org/curriculum.joone.org/wiki), is hosted on [GitHub](https://github.com/joone-org/intro-to-github), written in [markdown](https://github.com/joone-org/intro-to-markdown), and designed for integration with your [Learning Management System (LMS)](https://en.wikipedia.org/wiki/Learning_management_system).
 
+🧭 [**Navigators**](https://joone-org.notion.site/2f4d5bc97a0841d8af647646799358cf?v=8beedba61f4645e4b219919d79f61379):  Our [AI-powered tutors](https://joone-org.notion.site/2f4d5bc97a0841d8af647646799358cf?v=8beedba61f4645e4b219919d79f61379&p=35c6bef9f94f4f5aa9ea8b53650bc5ea&pm=c) are designed to adjust both curriculum content and website material to match the reading and comprehension abilities of each student. At the same time, they embody the playful personas of popular figures to make the learning experience more engaging. Expertly blending with existing educational systems, these tutors work to enhance and personalize each student's learning journey.
 
-🧭 [**Navigators**]():  Our [AI-powered tutors](https://joone-org.notion.site/2f4d5bc97a0841d8af647646799358cf?v=8beedba61f4645e4b219919d79f61379&p=35c6bef9f94f4f5aa9ea8b53650bc5ea&pm=c) are designed to adjust both curriculum content and website material to match the reading and comprehension abilities of each student. At the same time, they embody the playful personas of popular figures to make the learning experience more engaging. Expertly blending with existing educational systems, these tutors work to enhance and personalize each student's learning journey.
-
-🕹️ **[Immersive Labs](https://hubs.mozilla.com/TNxtsuH/otis)**:  We assist districts and staff in deploying [Mozilla Hubs Cloud]([https://hubs.mozilla.com/cloud](https://aws.amazon.com/marketplace/pp/prodview-jdjo7abklsxkg)), which hosts dynamic, interactive three-dimensional spaces where students can engage with our [navigators](https://joone-org.notion.site/2f4d5bc97a0841d8af647646799358cf?v=8beedba61f4645e4b219919d79f61379&p=35c6bef9f94f4f5aa9ea8b53650bc5ea&pm=c) and [curriculum]([https://sentionova.joone.org/](https://github.com/joone-org/curriculum.joone.org)), fostering creativity and critical thinking through an innovative approach to learning.
+🕹️ **[Immersive Labs](https://hubs.mozilla.com/TNxtsuH/otis)**:  We assist districts and staff in deploying [Mozilla's Hubs Cloud](https://hubs.mozilla.com/cloud), which hosts dynamic, interactive three-dimensional spaces where students can engage with our [navigators](https://joone-org.notion.site/2f4d5bc97a0841d8af647646799358cf?v=8beedba61f4645e4b219919d79f61379&p=35c6bef9f94f4f5aa9ea8b53650bc5ea&pm=c) and [curriculum]([https://sentionova.joone.org/](https://github.com/joone-org/curriculum.joone.org), fostering creativity and critical thinking through an innovative approach to learning.
 <br><br>
 # 🏹  Mission
 Joone's mission is to democratize K-12 education by creating and distributing free, open-source curricula. We are committed to fostering educational consistency and quality across the globe through interactive learning experiences and cutting-edge research. Our goal is to ensure every child, regardless of their location or circumstances, has access to personalized and high-quality education.
-<br><br>
+<br><br>  
 # 🔭  Vision
 We envision a world where every child, regardless of their socio-economic background, geographic location, or personal circumstances, has equal access to high-quality, personalized K-12 education. Through our innovative platform and open-source curricula, we aim to transform the educational landscape, making interactive and research-backed learning the norm, not the exception.
-<br><br>
+<br><br>  
 # 🌳  Values
 ### Inclusivity
 We believe in equal access to education for all. Our platform is designed to be accessible and user-friendly, accommodating diverse learning styles and needs. We offer multi-language support and special education resources to ensure every learner can benefit from our tools.
@@ -43,8 +42,8 @@ We understand the dynamic nature of the educational landscape. Our platform is d
 # 📬  Support
 For most support needs, please start with [GitHub Discussions](https://github.com/orgs/joone-org/discussions/categories/support-forums).<br>For urgent inquiries requiring immediate resolution, contact us via our [Service Desk](https://joone-org.atlassian.net/servicedesk/customer/portals).<br>
 
-🧸  We greatly appreciate all forms of support as we undertake this extraordinary task. This includes tax-exempt [monetary donations](https://donate.stripe.com/7sI2bC6Ii9cWcSc8wy), [cryptocurrency coin-tributions](https://commerce.coinbase.com/checkout/86bfde49-9ac9-4df3-8fa5-d02014836574) (capital gains exempt), and the invaluable time offered by our dedicated [volunteers](https://github.com/joone-org/curriculum.joone.org/wiki). Our GuideStar listing is [here](https://www.guidestar.org/profile/92-3556562) listed under EIN #92-3556562.
-<br><br>
+🧸  We greatly appreciate all forms of support as we undertake this extraordinary task. This includes tax-exempt [monetary donations](https://donate.stripe.com/7sI2bC6Ii9cWcSc8wy), capital-gains tax-exempt [cryptocurrency coin-tributions](https://commerce.coinbase.com/checkout/86bfde49-9ac9-4df3-8fa5-d02014836574), and the invaluable time offered by our dedicated [volunteers](https://github.com/joone-org/curriculum.joone.org/wiki). Our GuideStar listing can be found [here](https://www.guidestar.org/profile/92-3556562), listed under EIN #92-3556562.
+<br><br>  
 ## 📜  Legal
 [Acceptable Use](https://joone.org/legal.html#use)<br>
 [Accessibility](https://joone.org/legal.html#accessibility)<br>
@@ -54,3 +53,8 @@ For most support needs, please start with [GitHub Discussions](https://github.co
 [DMCA](https://joone.org/legal.html#dmca)<br>
 [Privacy Policy](https://joone.org/legal.html#privacy)<br>
 [Terms of Service](https://joone.org/legal.html#terms)<br>
+
+<br><br>
+---
+
+[Joone 501(c)(3)](https://joone.org) © [CC BY-NC-ND](https://github.com/joone-org/SentioNova/blob/main/LICENSE.md)
