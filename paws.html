@@ -1,0 +1,188 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joone</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <meta name="apple-mobile-web-app-title" content="Joone">
+    <meta name="application-name" content="Joone">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        overflow: hidden;
+        background-color: #ffffff;
+    }
+    #gameArea {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        cursor: pointer;
+        background-color: #ffffff;
+    }
+    .shape {
+    position: absolute;
+    user-select: none;
+    text-shadow: 2px 2px 10px rgba(0, 208, 255, 0.322);  
+}
+    #topRightContainer {
+        position: fixed;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    #score, button {
+    font-family: 'Arial', sans-serif;
+    color: white;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.264);
+    background: linear-gradient(to right, hsl(0, 100%, 75%), hsl(360, 100%, 75%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+button:active {
+    transform: scale(0.9);
+}
+    </style>
+    <script>
+        if (typeof navigator.serviceWorker !== 'undefined') {
+            navigator.serviceWorker.register('pwabuilder-sw.js')
+        }
+        </script>
+</head>
+    
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K2E5HK9G1K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-K2E5HK9G1K');
+</script>
+    
+<body>
+    <div id="gameArea"></div>
+    <div id="topRightContainer">
+    <span id="score">0</span>
+    <button id="pauseButton"><i class="fas fa-pause"></i></button>
+    <button id="redirectButton"><i class="fas fa-play"></i></button>
+</div>
+
+<script>
+ 
+    const scoreDisplay = document.getElementById("score");
+    let score = 0;
+
+    function updateScore() {
+        scoreDisplay.textContent = score;
+    }
+
+    let initialRedirectTimeout;
+
+    function setInitialRedirectTimeout() {
+        initialRedirectTimeout = setTimeout(() => {
+            location.href = "https://joone-org.atlassian.net/servicedesk/";
+        }, 5000);
+    }
+
+    setInitialRedirectTimeout();
+
+    let redirectEnabled = true;
+
+    const gameArea = document.getElementById("gameArea");
+    const pauseButton = document.getElementById("pauseButton");
+    const redirectButton = document.getElementById("redirectButton");
+    let pawTouched = false;
+
+    function randomInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    function createShape() {
+        const shape = document.createElement("i");
+        shape.classList.add("fas", "fa-paw");
+        const size = randomInt(25, 125);
+        const color1 = `hsl(${randomInt(0, 360)}, 100%, 75%)`;
+        const color2 = `hsl(${randomInt(0, 360)}, 100%, 75%)`; 
+        const fontSize = `${size}px`;
+        const left = randomInt(0, gameArea.clientWidth - size);
+        const top = randomInt(0, gameArea.clientHeight - size);
+        const rotation = randomInt(0, 360);
+
+        shape.classList.add("shape");
+shape.style.fontSize = fontSize;
+shape.style.color = "white";
+shape.style.left = `${left}px`;
+shape.style.top = `${top}px`;
+shape.style.webkitTextFillColor = "transparent";
+shape.style.webkitBackgroundClip = "text";
+shape.style.backgroundImage = `linear-gradient(${color1}, ${color2})`;
+shape.style.transform = `rotate(${rotation}deg)`;
+shape.style.textShadow = "2px 2px 10px rgba(255, 0, 0, 0.6)";
+
+        shape.addEventListener("click", () => {
+            clearTimeout(initialRedirectTimeout);
+            pawTouched = true;
+            gameArea.removeChild(shape);
+            score++;
+            scoreDisplay.textContent = `${score}`;
+            if (redirectEnabled) {
+                setInitialRedirectTimeout();
+            }
+        });
+
+        const pawBaseDuration = randomInt(2000, 4000);
+        const pawDuration = pawBaseDuration * Math.max(0, (200 - 2 * (score * 42 / 200)) / 100);
+
+        gameArea.appendChild(shape);
+
+        setTimeout(() => {
+            if (shape.parentNode) {
+                gameArea.removeChild(shape);
+            }
+        }, pawDuration / (1 + score / 200));  // paws disappear faster as score increases
+    }
+
+    pauseButton.addEventListener("click", () => {
+        clearTimeout(initialRedirectTimeout);
+        redirectEnabled = !redirectEnabled;
+        pauseButton.textContent = redirectEnabled ? '⏸' : "PAWS'D";
+    });
+
+    redirectButton.addEventListener("click", () => {
+        location.href = "https://joone-org.atlassian.net/servicedesk/";
+    });
+
+    function startCreatingShapes() {
+        createShape();
+        const baseInterval = 600;
+        const speedFactor = Math.max(0, (300 - 2 * (score * 42 / 200)) / 100);
+
+        const currentInterval = baseInterval * speedFactor;
+        setTimeout(startCreatingShapes, currentInterval);
+    }
+
+    startCreatingShapes();
+</script>
+
+</body>
+</html>
