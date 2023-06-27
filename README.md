@@ -1,4 +1,3 @@
-# Joone
 We are a 501(c)(3) non-profit organization devoted to providing educational assistive technologies and curricula to disadvantaged youth worldwide.
 <br><br>
 # [🌱](https://www.figma.com/file/cJoBjCunCySAbjRsfJ2wpb/Joone-Timeline?type=whiteboard&node-id=0%3A1&t=cnXcZFLV5yraOcam-1)  Our Initiatives
