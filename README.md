@@ -42,7 +42,7 @@ We understand the dynamic nature of the educational landscape. Our platform is d
 # 📬  Support
 For most support needs, please start with [**GitHub Discussions**](https://github.com/orgs/joone-org/discussions/categories/support-forums).<br>For urgent inquiries requiring immediate resolution, contact us via our [**Service Desk**](https://joone-org.atlassian.net/servicedesk/customer/portals).<br>
 
-We truly appreciate all 🧸 [Donations](https://donate.stripe.com/7sI2bC6Ii9cWcSc8wy), 🚀 [Coin-tributions](https://commerce.coinbase.com/checkout/86bfde49-9ac9-4df3-8fa5-d02014836574), and 🙌 [Volunteers](https://github.com/joone-org/curriculum.joone.org/wiki) as we take on this extraordianry task.
+🧸  We greatly appreciate all forms of support as we undertake this extraordinary task. This includes tax-exempt [monetary donations](https://donate.stripe.com/7sI2bC6Ii9cWcSc8wy), [cryptocurrency coin-tributions](https://commerce.coinbase.com/checkout/86bfde49-9ac9-4df3-8fa5-d02014836574) (capital gains exempt), and the invaluable time offered by our dedicated [volunteers](https://github.com/joone-org/curriculum.joone.org/wiki). Our GuideStar listing is [here](https://www.guidestar.org/profile/92-3556562) listed under EIN #92-3556562.
 <br><br>
 ## 📜  Legal
 [Acceptable Use](https://joone.org/legal.html#use)<br>
@@ -53,4 +53,3 @@ We truly appreciate all 🧸 [Donations](https://donate.stripe.com/7sI2bC6Ii9cWc
 [DMCA](https://joone.org/legal.html#dmca)<br>
 [Privacy Policy](https://joone.org/legal.html#privacy)<br>
 [Terms of Service](https://joone.org/legal.html#terms)<br>
-Joone's EIN is 92-3556562
