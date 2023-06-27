@@ -1,5 +1,5 @@
-# Joone
-We are a 501(c)(3) non-profit organization devoted to providing educational assistive technologies and curricula to disadvantaged youth worldwide.
+# Joone 501(c)(3)
+We are a non-profit organization devoted to providing educational assistive technologies and curricula to disadvantaged youth worldwide.
 
 # [🌱](https://www.figma.com/file/cJoBjCunCySAbjRsfJ2wpb/Joone-Timeline?type=whiteboard&node-id=0%3A1&t=cnXcZFLV5yraOcam-1)  Our Initiatives
 🧩 [**Curriculum**]():  Our curriculum is a free, open-source solution designed to blend [core academics](https://github.com/joone-org/SentioNova/wiki/California-Graduation-Requirements) with [career and technical education paths](https://github.com/joone-org/SentioNova/wiki/Career-Technical-Education-(CTE)-Pathways) to guide students on their journey towards specific career choices. Developed by [community contributions](https://github.com/joone-org/curriculum.joone.org/wiki) our content is continuously updated by a global community focused on inclusivity and equity. We're reshaping the future of education, making it more relevant, engaging, and accessible for all.
