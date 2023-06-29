@@ -5,8 +5,8 @@ author:
 
 # The `>` after `description:` means to ignore line-breaks until next key.
 # If you want to omit the line-break after the end of text, use `>-` instead.
-description: 
-We are a 501(c)(3) non-profit organization devoted to providing educational assistive technologies and curricula to disadvantaged youth worldwide.
+description: >
+  We are a 501(c)(3) non-profit organization devoted to providing educational assistive technologies and curricula to disadvantaged youth worldwide.
 
 # Build settings
 
