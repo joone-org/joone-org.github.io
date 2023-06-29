@@ -50,8 +50,6 @@ For most support needs, please start with [GitHub Discussions](https://github.co
 [DMCA](https://joone.org/legal.html#dmca)<br>
 [Privacy Policy](https://joone.org/legal.html#privacy)<br>
 [Terms of Service](https://joone.org/legal.html#terms)<br>
-
 <br><br>
 ---
-
 [Joone 501(c)(3)](https://joone.org) © [CC BY-NC-ND](https://github.com/joone-org/SentioNova/blob/main/LICENSE.md)
