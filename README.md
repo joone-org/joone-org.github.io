@@ -1,6 +1,6 @@
+# [🌱](https://www.figma.com/file/cJoBjCunCySAbjRsfJ2wpb/Joone-Timeline?type=whiteboard&node-id=0%3A1&t=cnXcZFLV5yraOcam-1)  Our Initiatives
 We are a 501(c)(3) non-profit organization devoted to providing educational assistive technologies and curricula to disadvantaged youth worldwide.
 <br><br>
-# [🌱](https://www.figma.com/file/cJoBjCunCySAbjRsfJ2wpb/Joone-Timeline?type=whiteboard&node-id=0%3A1&t=cnXcZFLV5yraOcam-1)  Our Initiatives
 📚  We develop free, open-source K-12 [curricula](https://github.com/joone-org/curriculum.joone.org/wiki) that seamlessly combines [core academics](https://github.com/joone-org/curriculum.joone.org/wiki/California-Graduation-Requirements) with [career and technical education paths](https://github.com/joone-org/curriculum.joone.org/wiki/Career-Technical-Education-(CTE)-Pathways). With an emphasis on college and career readiness, our approach is diverse, inclusive, and equitable. All content is hosted on [GitHub](https://github.com/joone-org/intro-to-github), written in [markdown](https://github.com/joone-org/intro-to-markdown), and designed for integration with your [Learning Management System](https://en.wikipedia.org/wiki/Learning_management_system).
 
 🧭  Our [AI-powered tutors](https://joone-org.notion.site/2f4d5bc97a0841d8af647646799358cf?v=8beedba61f4645e4b219919d79f61379) are designed to adjust both curriculum content and website material to match the reading and comprehension abilities of each student. At the same time, they embody the playful personas of popular figures to make the learning experience more engaging. Expertly blending with existing educational systems, these tutors work to enhance and personalize each student's learning journey. 
@@ -49,7 +49,7 @@ For most support needs, please start with [GitHub Discussions](https://github.co
 [Data Processing](https://joone.org/legal.html#data)<br>
 [DMCA](https://joone.org/legal.html#dmca)<br>
 [Privacy Policy](https://joone.org/legal.html#privacy)<br>
-[Terms of Service](https://joone.org/legal.html#terms)<br>
-<br><br>
+[Terms of Service](https://joone.org/legal.html#terms)<br><br>
+
 ---
 [Joone 501(c)(3)](https://joone.org) © [CC BY-NC-ND](https://github.com/joone-org/SentioNova/blob/main/LICENSE.md)
