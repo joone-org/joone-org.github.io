@@ -20,7 +20,7 @@ We uphold a set of core principles:
 <br><br>
 # 📬  Support
 - For assistance, begin with [GitHub Discussions](https://github.com/orgs/joone-org/discussions/categories/support-forums) or reach out to our [Service Desk](https://joone-org.atlassian.net/servicedesk/customer/portals) for urgent inquiries.
-- Your generosity through [donations](https://donate.stripe.com/7sI2bC6Ii9cWcSc8wy) and [contributions](https://github.com/joone-org/curriculum.joone.org/wiki) is deeply appreciated. Find our GuideStar listing [here](https://www.guidestar.org/profile/92-3556562) under EIN #92-3556562.
+- Your [donations](https://donate.stripe.com/7sI2bC6Ii9cWcSc8wy) and [contributions](https://github.com/joone-org/curriculum.joone.org/wiki) are honestly appreciated. Find our GuideStar listing [here](https://www.guidestar.org/profile/92-3556562) under EIN #92-3556562.
 <br><br>  
 # 📜 Legal
 - [Accessibility & Compliance](https://joone.org/legal.html#accessibility)<br>
