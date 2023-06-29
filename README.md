@@ -25,6 +25,5 @@ We uphold a set of core principles:
 # 📜 Legal
 - [Accessibility & Compliance](https://joone.org/legal.html#accessibility)<br>
 - [Policies & Terms](https://joone.org/legal.html#use)<br>
-
----
-[Joone 501(c)(3)](https://joone.org) © [CC BY-NC-ND](https://github.com/joone-org/SentioNova/blob/main/LICENSE.md)
+<br><br>
+<p align="center"><a href="https://joone.org">Joone 501(c)(3)</a> © <a href="https://github.com/joone-org/curriculum.joone.org/blob/main/LICENSE.md">CC BY-NC-ND</a></p>
