@@ -1,5 +1,5 @@
 # [🌱](https://www.figma.com/file/cJoBjCunCySAbjRsfJ2wpb/Joone-Timeline?type=whiteboard&node-id=0%3A1&t=cnXcZFLV5yraOcam-1)  Our Initiatives
-We are a 501(c)(3) non-profit devoted to providing K-12 assistive technologies and curricula to disadvantaged youth worldwide.
+We are a 501(c)(3) non-profit devoted to providing K-12 assistive technologies and curricula to disadvantaged youth worldwide..
 
 📚  We develop free, open-source K-12 [curricula](https://github.com/joone-org/curriculum.joone.org) that seamlessly combines core academics with career and technical education paths. With an emphasis on college and career readiness, our approach is diverse, inclusive, and equitable. All content is hosted on GitHub, written in markdown, and designed for integration with your Learning Management System.
 
