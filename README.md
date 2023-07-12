@@ -27,5 +27,3 @@ We uphold a set of core principles:
 - [Policies & Terms](https://joone.org/legal.html#use)<br>
 <br><br>
 <p align="center"><a href="https://joone.org">Joone 501(c)(3)</a> © <a href="https://github.com/joone-org/curriculum.joone.org/blob/main/LICENSE.md">CC BY-NC-ND</a></p>
-
-.
