@@ -5,9 +5,6 @@ We are a 501(c)(3) non-profit devoted to providing K-12 assistive technologies a
 
 📚  We develop free, open-source K-12 [curricula](https://curriculum.joone.org) that seamlessly combines core academics with career and technical education paths. With an emphasis on college and career readiness, our approach is diverse, inclusive, and equitable. All content is hosted on GitHub, written in markdown, and designed for integration with your Learning Management System.
 
-[![Alternative text](https://github.com/joone-org/joone-org.github.io/assets/137654670/5be11c60-1a72-4e3f-b91b-d651d90c47ee)](https://github.com/joone-org/curriculum.joone.org/blob/main/curriculum/MJ-9798851707100/README.md)
-
-
 <br>
 
 🧭  Our [AI-powered tutors](https://joone-org.notion.site/2f4d5bc97a0841d8af647646799358cf?v=8beedba61f4645e4b219919d79f61379) are designed to adjust both curriculum content and website material to match the reading and comprehension abilities of each student. At the same time, they embody the playful personas of popular figures to make the learning experience more engaging. Expertly blending with existing educational systems, these tutors work to enhance and personalize each student's learning journey. 
