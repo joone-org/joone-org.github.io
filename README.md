@@ -5,7 +5,8 @@ We are a 501(c)(3) non-profit devoted to providing K-12 assistive technologies a
 
 📚  We develop free, open-source K-12 [curricula](https://curriculum.joone.org) that seamlessly combines core academics with career and technical education paths. With an emphasis on college and career readiness, our approach is diverse, inclusive, and equitable. All content is hosted on GitHub, written in markdown, and designed for integration with your Learning Management System.
 
-[![Beginning Midjourney](https://github.com/joone-org/joone-org.github.io/assets/137654670/5be11c60-1a72-4e3f-b91b-d651d90c47ee)](https://github.com/joone-org/curriculum.joone.org/blob/main/curriculum/MJ-9798851707100/README.md)
+[![Alternative text](https://github.com/joone-org/joone-org.github.io/assets/137654670/5be11c60-1a72-4e3f-b91b-d651d90c47ee)](https://github.com/joone-org/curriculum.joone.org/blob/main/curriculum/MJ-9798851707100/README.md)
+
 
 <br>
 
