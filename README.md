@@ -27,9 +27,5 @@ We uphold a set of core principles:
 # 📬  Support
 - For assistance begin with [GitHub Discussions](https://github.com/orgs/joone-org/discussions/categories/support-forums) or reach out to our [Service Desk](https://joone-org.atlassian.net/servicedesk/customer/portals) for urgent inquiries.
 - Your [donations](https://donate.stripe.com/7sI2bC6Ii9cWcSc8wy) and [contributions](https://github.com/joone-org/curriculum.joone.org/wiki) are honestly appreciated. Our [GuideStar](https://www.guidestar.org/profile/92-3556562) is under EIN #92-3556562.
-<br><br>  
-# 📜 Legal
-- [Accessibility & Compliance](https://joone.org/legal.html#accessibility)<br>
-- [Policies & Terms](https://joone.org/legal.html#use)<br>
-<br><br>
-<p align="center"><a href="https://joone.org">Joone 501(c)(3)</a> © <a href="https://github.com/joone-org/curriculum.joone.org/blob/main/LICENSE.md">CC BY-NC-ND</a></p>
+<br><br><br>
+<p align="center"><a href="https://joone.org">Joone 501(c)(3)</a> © <a href="https://github.com/joone-org/curriculum.joone.org/blob/main/LICENSE.md">CC BY-NC-ND</a><br><a href="https://joone.org/legal.html">Policies & Terms</a></p>
