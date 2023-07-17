@@ -1,0 +1,681 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Joone</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-interactiveBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="b1ca1308-cebc-41b7-9813-e31d258b6976" class="page sans"><header><img class="page-cover-image" src="https://images.unsplash.com/photo-1489011397388-494518edf378?ixlib=rb-4.0.3&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb" style="object-position:center 17.669999999999998%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="Joone%20b1ca1308cebc41b79813e31d258b6976/logo_final.png"/></div><h1 class="page-title">Joone</h1><p class="page-description"></p></header><div class="page-body"><p id="16a4ffbb-8b09-445e-95bc-60154857dcf5" class="block-color-default"><mark class="highlight-gray">We are a </mark><mark class="highlight-yellow">501(c)(3) non-profit organization</mark><mark class="highlight-gray"> </mark><mark class="highlight-pink">devoted to providing</mark><mark class="highlight-gray"> </mark><mark class="highlight-blue">educational assistive technologies</mark><mark class="highlight-teal"> and curricula </mark><mark class="highlight-gray">to </mark><mark class="highlight-purple">disadvantaged youth worldwide</mark><mark class="highlight-gray">.</mark></p><hr id="de330893-e542-4eda-828d-6e50cdd6aa9b"/><h1 id="bb195beb-6384-479d-ac2e-f5f214187d65" class="">🌱  Our Initiatives</h1><figure class="block-color-teal_background callout" style="white-space:pre-wrap;display:flex" id="823f65b8-3c90-4ae9-b856-9d3927ca4993"><div style="font-size:1.5em"><span class="icon">🧭</span></div><div style="width:100%"><strong><a href="https://www.notion.so/2f4d5bc97a0841d8af647646799358cf?pvs=21"><mark class="highlight-teal">Cognitive Navigators</mark></a></strong><mark class="highlight-gray">:</mark>  <mark class="highlight-gray">Our AI-powered tutors are designed to adjust both curriculum content and website material to match the reading and comprehension abilities of each student. At the same time, they embody the playful personas of popular figures to make the learning experience more engaging. Expertly blending with existing educational systems, these tutors work to enhance and personalize each student&#x27;s learning journey.</mark><div id="b54f326e-7b76-49bc-82a2-a54424c883fe" class="column-list"><div id="8c59389b-b096-4808-bec8-d1540af67f40" style="width:100%" class="column"><figure id="cd12fa03-d57f-43b2-818f-7584896e9652" class="image" style="text-align:center"><a href="Joone%20b1ca1308cebc41b79813e31d258b6976/will.png"><img style="width:500px" src="Joone%20b1ca1308cebc41b79813e31d258b6976/will.png"/></a><figcaption>🍯 <mark class="highlight-pink"><strong><a href="https://www.notion.so/0dfc7ad569614629b723f4c1843b9e50?pvs=21">Will is nervous but he tries to be brave</a></strong></mark></figcaption></figure><p id="7596c74f-0ad8-4189-b212-7cac31d1dfb6" class="">
+</p></div><div id="4c31f39a-cb33-45c8-ab5b-758381ee9f11" style="width:100%" class="column"><figure id="f484e0e6-6118-45f4-9dde-3a2263ab5be6" class="image" style="text-align:center"><a href="Joone%20b1ca1308cebc41b79813e31d258b6976/ches.png"><img style="width:500px" src="Joone%20b1ca1308cebc41b79813e31d258b6976/ches.png"/></a><figcaption><mark class="highlight-purple"><strong>🏳️‍🌈 </strong></mark><mark class="highlight-purple"><strong><a href="https://www.notion.so/ef43688e66b94aefb9dc8e9d212b110c?pvs=21">Che is a curious coding creature</a></strong></mark></figcaption></figure></div><div id="e1fb6aad-1ab3-4f8e-a02b-3cab44bfde64" style="width:100%" class="column"><figure id="ce939d8a-4f5c-431d-b6d4-f9a0cb2ead67" class="image" style="text-align:center"><a href="Joone%20b1ca1308cebc41b79813e31d258b6976/marie.png"><img style="width:500px" src="Joone%20b1ca1308cebc41b79813e31d258b6976/marie.png"/></a><figcaption>📚 <mark class="highlight-teal"><strong><a href="https://www.notion.so/d9d3c48ca8824e6f8b373636c59570e8?pvs=21">Marie empowers educators</a></strong></mark></figcaption></figure></div></div></div></figure><figure class="block-color-blue_background callout" style="white-space:pre-wrap;display:flex" id="5fd3bd88-a41b-4ae9-a49c-7b910e3f6d80"><div style="font-size:1.5em"><span class="icon">🧩</span></div><div style="width:100%"><strong><a href="https://sentionova.joone.org/"><mark class="highlight-blue">SentioNova</mark></a></strong><mark class="highlight-gray">:  Our curriculum is a free, open-source solution designed to blend </mark><mark class="highlight-gray"><a href="https://github.com/joone-org/SentioNova/wiki/California-Graduation-Requirements">core academics</a></mark><mark class="highlight-gray"> with </mark><mark class="highlight-gray"><a href="https://github.com/joone-org/SentioNova/wiki/Career-Technical-Education-(CTE)-Pathways">career and technical education paths</a></mark><mark class="highlight-gray"> to guide students on their journey towards specific career choices. Developed with </mark><a href="https://github.com/joone-org/SentioNova/wiki"><mark class="highlight-gray">community contributions,</mark></a><mark class="highlight-gray"> our content is continuously updated by a global community focused on inclusivity and equity. We&#x27;re reshaping the future of education, making it more relevant, engaging, and accessible for all.</mark><div id="1b20b35d-9f7d-4c94-980d-e877494082f7" class="column-list"><div id="8907d15b-bff3-457e-8d9b-fdc020c02ca4" style="width:100%" class="column"><figure id="53ac7393-0fe3-4d5c-98f7-39234e17761f" class="image" style="text-align:center"><a href="Joone%20b1ca1308cebc41b79813e31d258b6976/intro2chatgpt.png"><img style="width:512px" src="Joone%20b1ca1308cebc41b79813e31d258b6976/intro2chatgpt.png"/></a><figcaption>⚙️ <mark class="highlight-orange"><strong><a href="https://docs.google.com/document/d/119zK2_nOVWTobDOLKHr3uFI8qbWAJCaT8xSjoDDy9sA/edit?usp=sharing">Introduction to ChatGPT</a></strong></mark></figcaption></figure></div><div id="a5f0e77a-753f-4fe2-8783-c41ab0d6fc71" style="width:100%" class="column"><figure id="6943421c-fa33-4e5a-960a-a6dd23ada9ee" class="image" style="text-align:center"><a href="Joone%20b1ca1308cebc41b79813e31d258b6976/lyra.png"><img style="width:512px" src="Joone%20b1ca1308cebc41b79813e31d258b6976/lyra.png"/></a><figcaption>💭 <mark class="highlight-purple"><strong><a href="https://docs.google.com/document/d/1-h3L47MUK0FYfi5_RZKsQrOytZ0eYobLDwp9geVIgC8/edit?usp=sharing">Lyra&#x27;s Journey with OCD</a></strong></mark></figcaption></figure></div><div id="74886b3e-801f-4d39-9c1f-a935f3c42de4" style="width:100%" class="column"><figure id="1accf1fd-8368-412d-b70c-b7be8c749210" class="image" style="text-align:center"><a href="Joone%20b1ca1308cebc41b79813e31d258b6976/piracy.png"><img style="width:512px" src="Joone%20b1ca1308cebc41b79813e31d258b6976/piracy.png"/></a><figcaption>🏴‍☠️ <mark class="highlight-yellow"><strong><a href="https://www.notion.so/e7c9683be6504bb4b25a34910d2532eb?pvs=21">Interdisciplinary Piracy</a></strong></mark></figcaption></figure></div></div></div></figure><figure class="block-color-purple_background callout" style="white-space:pre-wrap;display:flex" id="a3965bab-8619-4950-a35a-2c77ba2d9b4d"><div style="font-size:1.5em"><span class="icon">🕹️</span></div><div style="width:100%"><a href="https://hubs.mozilla.com/TNxtsuH/otis"><mark class="highlight-pink"><strong>Immersive Labs</strong></mark></a><mark class="highlight-gray">:  We assist districts and staff in deploying </mark><strong><a href="https://hubs.mozilla.com/cloud">Mozilla Hubs Cloud</a></strong><mark class="highlight-gray">, which hosts dynamic, interactive three-dimensional spaces where students can engage with </mark><strong><mark class="highlight-teal"><a href="https://www.notion.so/2f4d5bc97a0841d8af647646799358cf?pvs=21">Cognitive Navigators</a></mark></strong><mark class="highlight-gray"> and </mark><strong><a href="https://sentionova.joone.org/"><mark class="highlight-blue">SentioNova</mark></a></strong><mark class="highlight-gray">, fostering creativity and critical thinking through an innovative approach to learning.</mark><div id="a3356e91-439b-48c5-91a0-3eea56d71adb" class="column-list"><div id="f30da4fb-3554-4972-8d95-b290d400abf9" style="width:100%" class="column"><figure id="524889f4-5c74-4a18-95f8-51e1c642d2f0" class="image" style="text-align:center"><a href="Joone%20b1ca1308cebc41b79813e31d258b6976/festival.png"><img style="width:512px" src="Joone%20b1ca1308cebc41b79813e31d258b6976/festival.png"/></a><figcaption>🎊 <mark class="highlight-pink"><strong><a href="https://hubs.mozilla.com/scenes/Rpt8DJS">Festival</a></strong></mark></figcaption></figure></div><div id="01ea236e-fde4-4621-af52-c1ee0b2170e8" style="width:100%" class="column"><figure id="772233d3-605c-49ba-923f-fe2c5ba7f66f" class="image" style="text-align:center"><a href="Joone%20b1ca1308cebc41b79813e31d258b6976/chess3.png"><img style="width:512px" src="Joone%20b1ca1308cebc41b79813e31d258b6976/chess3.png"/></a><figcaption>♟️ <strong><a href="https://hubs.mozilla.com/scenes/TUbbVhb">Chess ^3</a></strong></figcaption></figure></div><div id="8d83b139-8947-4981-8004-b9fc75a2c62b" style="width:100%" class="column"><figure id="9a03eba3-e340-4224-9738-8869053c5ccf" class="image" style="text-align:center"><a href="Joone%20b1ca1308cebc41b79813e31d258b6976/theater.png"><img style="width:512px" src="Joone%20b1ca1308cebc41b79813e31d258b6976/theater.png"/></a><figcaption>🍿 <mark class="highlight-red"><strong><a href="https://hubs.mozilla.com/scenes/I9LuR61">Theater</a></strong></mark></figcaption></figure></div></div></div></figure><div id="52441669-4f8e-4cce-ae87-7275ce10aa77" class="column-list"><div id="700d6a48-b3bc-4ad6-89e3-b3ed11156a61" style="width:50%" class="column"><h1 id="83e3dd26-6734-498c-872d-a3e4eb059708" class="">🏹  Mission</h1><hr id="e27bd405-49a4-4cd2-bf32-f044eddb3fc1"/><blockquote id="f46d44c6-cc2e-4cdc-be17-4310bf8ef0d8" class="block-color-gray_background">Joone&#x27;s mission is to democratize K-12 education by creating and distributing free, open-source curricula. We are committed to fostering educational consistency and quality across the globe through interactive learning experiences and cutting-edge research. Our goal is to ensure every child, regardless of their location or circumstances, has access to personalized and high-quality education.</blockquote><p id="ccb8ecdc-623f-41b2-9626-43c8857d7f63" class="">
+</p></div><div id="ebc8581f-61ec-43c5-a988-f8ae17946f39" style="width:50%" class="column"><h1 id="78a29850-1ed8-4c9b-8350-4d740a2a253e" class="block-color-default">🔭  Vision</h1><hr id="a8873d23-7f38-4b7d-8972-f80701bad441"/><blockquote id="44fb2849-0b91-46cf-bc23-1923988706eb" class="block-color-gray_background">We envision a world where every child, regardless of their socio-economic background, geographic location, or personal circumstances, has equal access to high-quality, personalized K-12 education. Through our innovative platform and open-source curricula, we aim to transform the educational landscape, making interactive and research-backed learning the norm, not the exception.</blockquote></div></div><p id="9ccc583a-6968-489e-bf47-3ecba72b3108" class="">
+</p><h1 id="8faafa1f-0718-479d-b5c7-ad360628d4fc" class="">🌳  Values</h1><hr id="2c75b854-24e2-40ab-8e7a-6d70de94c544"/><div id="61aa872f-c2b9-4cb6-b366-43dc825b7897" class="column-list"><div id="b6985f88-e165-45d1-972d-a7e41b26315a" style="width:50%" class="column"><h3 id="74001b48-669f-41c3-90af-2a2790a3235d" class="">Inclusivity</h3><p id="ede12c25-0d84-45dc-ada0-63ba32bf94da" class="">We believe in equal access to education for all. Our platform is designed to be accessible and user-friendly, accommodating diverse learning styles and needs. We offer multi-language support and special education resources to ensure every learner can benefit from our tools.</p><h3 id="f6a2ada8-8768-42ac-9372-37f87732c457" class="">Quality</h3><p id="44deb90f-1e88-4209-98e8-e13cead5fec5" class="">We are committed to providing high-quality educational resources. Our platform utilizes advanced AI technology to deliver personalized, comprehensive, and up-to-date learning materials. We regularly review and update our content to ensure it meets the highest standards of educational excellence.</p><h3 id="20b93d1e-4ec8-4fed-9127-28049e3264e1" class="">Empathy</h3><p id="9188cb4d-59c4-4a04-a550-5b28f78d2519" class="">We understand and respect the diverse needs of learners. Our platform offers adaptive learning pathways, personalized lesson plans, and instant feedback to meet each learner&#x27;s unique needs. We also prioritize mental health, offering well-being check-ins and stress management techniques.</p><h3 id="814ab7ab-5520-4ebe-ba39-29f24528ab96" class="">Integrity</h3><p id="10b45979-de53-4ea0-94bf-41839c4adc9b" class="">We uphold the highest ethical standards in our work. We prioritize data privacy and security, adhering to global data protection regulations. We also ensure our actions and decisions align with our mission and vision, and we are transparent about our processes and practices.</p></div><div id="c3659266-96c1-4d39-adb3-86e2cee16c38" style="width:50%" class="column"><h3 id="156fb457-32f4-46e3-aea6-7a4dfef9734b" class="">Innovation</h3><p id="149d3754-4c1f-43b4-87a7-889c736294f6" class="">We embrace new technologies and methodologies to improve and personalize the learning experience. Our platform leverages advanced AI technology to provide dynamic, context-aware instruction and real-time adaptation of learning materials.</p><h3 id="c84fd311-6b74-4b98-84ce-4eac42c20667" class="">Openness</h3><p id="c40ec410-3fd2-40cf-bd24-087ced7096eb" class="">We foster a culture of transparency and collaboration. Our platform is open-source, allowing educators and developers worldwide to contribute to its improvement. We also connect educators and students globally, promoting the exchange of ideas and fostering a sense of global citizenship.</p><h3 id="9f0deefb-2789-4f95-9137-887da19cdcf5" class="">Sustainability</h3><p id="79927a42-390b-4be2-bcc4-9eef9ef0b07e" class="">We ensure our practices are sustainable. Our platform is free, making quality education accessible to all. We also strive to keep our operations efficient and our content up-to-date, ensuring we can continue to address global education gaps without compromising future generations&#x27; educational needs.</p><h3 id="17965baa-d9fa-4b55-ba94-e46fc08a2f09" class="">Adaptability</h3><p id="89d884e9-5576-4d46-99a2-07cb2acf447f" class="">We understand the dynamic nature of the educational landscape. Our platform is designed to be flexible and responsive, adjusting learning paths in real-time based on student progress. We also regularly update our platform to keep pace with technological advancements, evolving teaching methodologies, and shifting societal contexts.</p></div></div><h1 id="ba3cd20e-3d18-4992-8c3d-743a888c4500" class="">📬  Support</h1><hr id="1566ea57-0608-4f9b-a222-0cef203d5805"/><p id="686c0ba3-aab4-4707-9f46-312e05fb27ff" class="">For most support needs, please start with <mark class="highlight-purple"><strong><a href="https://github.com/orgs/joone-org/discussions/categories/support-forums">GitHub Discussions</a></strong></mark>. For urgent inquiries requiring immediate resolution, contact us via our <strong><mark class="highlight-red"><a href="https://joone-org.atlassian.net/servicedesk/customer/portals">Service Desk</a></mark></strong>.</p><h1 id="bfd717c7-c931-4d62-9e32-720e59554ee1" class="">🔍  Sitemap</h1><hr id="4be7b169-c1b2-4477-9d6a-a6e34a7d6137"/><div id="106f5c01-b65d-479d-a7e3-f22cf76c18ef" class="column-list"><div id="d1d5d4b9-692d-42a1-a2a6-e4428b11f9a8" style="width:50%" class="column"><figure id="2f4d5bc9-7a08-41d8-af64-7646799358cf" class="block-color-teal link-to-page"><a href="https://www.notion.so/2f4d5bc97a0841d8af647646799358cf?pvs=21"><span class="icon">🧭</span>Cognitive Navigators</a></figure><figure id="1dfc93c7-f08f-4582-aaad-bca3614dacf5" class="link-to-page"><a href="https://www.notion.so/SentioNova-1dfc93c7f08f4582aaadbca3614dacf5?pvs=21"><span class="icon">🧩</span>SentioNova</a></figure><p id="c82e9ca4-1ff5-4c9f-8164-591aa5d727ee" class="">📦 <a href="https://www.figma.com/file/cJoBjCunCySAbjRsfJ2wpb/Joone-Timeline?type=whiteboard&amp;node-id=0%3A1&amp;t=cnXcZFLV5yraOcam-1">Product Overview</a></p><p id="2871d091-565f-4a6b-bb5c-95e9478d79ff" class="">🧸 <a href="https://donate.stripe.com/7sI2bC6Ii9cWcSc8wy">Donations</a></p><p id="78d247eb-89f3-40cb-8989-ef897610ce8d" class="">🚀 <a href="https://commerce.coinbase.com/checkout/86bfde49-9ac9-4df3-8fa5-d02014836574">Cointribute via Crypto</a></p><p id="959b5cb7-d698-46a6-bafe-441428290aeb" class="">💰 <mark class="highlight-gray">Joone’s EIN is </mark><mark class="highlight-brown">92-3556562</mark></p><p id="4fe79071-137e-4950-ba4b-cda7614d1bed" class="">
+</p></div><div id="2a5e6c2c-01f3-4dc9-9c30-835b3c37f21d" style="width:50%" class="column"><p id="52f125b1-4e33-41d9-a4a1-e4a1f53b8ccc" class="block-color-gray"><a href="https://joone.org/legal.html#use">Acceptable Use</a></p><p id="a1c2c188-a71d-46d5-9322-6c50cc3ef2b9" class="block-color-gray"><a href="https://joone.org/legal.html#accessibility">Accessibility</a></p><p id="88293aa7-7c0f-4ec6-8573-b91c315e376e" class="block-color-gray"><a href="https://joone.org/legal.html#cookies">Cookies</a></p><p id="c4d107a1-5fc9-450f-ac0c-d2d1b8aaaa23" class="block-color-gray"><a href="https://joone.org/legal.html#coppa">COPPA</a></p><p id="f4f8b985-f88f-4d78-b624-d1581d62ff55" class="block-color-gray"><a href="https://joone.org/legal.html#data">Data Processing</a></p><p id="3a4493bb-97da-4906-a66d-379ff880ab36" class="block-color-gray"><a href="https://joone.org/legal.html#dmca">DMCA</a></p><p id="51ea7e40-3a71-4449-8f03-87bd40fa4f12" class="block-color-gray"><a href="https://joone.org/legal.html#privacy"><mark class="highlight-gray">Privacy Policy</mark></a></p><p id="097d7d53-b002-4333-9a5c-40d7166112b6" class="block-color-gray"><a href="https://joone.org/legal.html#terms"><mark class="highlight-gray">Terms of Service</mark></a></p><p id="318579af-2ead-4424-be00-76c9edb04ac4" class="">
+</p></div></div></div></article></body></html>
