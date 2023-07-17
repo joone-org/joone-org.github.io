@@ -1,5 +1,5 @@
 # [🌱](https://www.figma.com/file/cJoBjCunCySAbjRsfJ2wpb/Joone-Timeline?type=whiteboard&node-id=0%3A1&t=cnXcZFLV5yraOcam-1)  Our Initiatives
-A 501(c)(3) non-profit providing free K-12 curricula and assistive technologies.
+A 501(c)(3) non-profit providing K-12 curricula and assistive technologies.
 
 <br>
 
