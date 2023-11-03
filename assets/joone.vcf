@@ -3,7 +3,7 @@ VERSION:3.0
 PRODID:-//Apple Inc.//iPhone OS 17.0.3//EN
 N:;;;;
 ORG:joone.org;
-item1.EMAIL;type=INTERNET;type=pref:bubble@joone.org
+item1.EMAIL;type=INTERNET;type=pref:bubble@joone.app
 item1.X-ABLabel:iMessage
 item2.TEL;type=pref:+1 (855) 566-6332
 item2.X-ABLabel:Call or Text
