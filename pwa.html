@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
   <meta name="theme-color" content="#FFFFFF" />
-  <title>Phone-Like PWA</title>
+  <title>Futuristic Phone-Like PWA</title>
 
   <!-- 
     NOTE:
@@ -57,7 +57,7 @@
     });
   </script>
 
-  <!-- Ionicons (for iOS-like icons) -->
+  <!-- Ionicons (for iOS-like icons / brand icons) -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
@@ -72,21 +72,14 @@
       padding: 0;
       box-sizing: border-box;
     }
-
     body {
       font-family: 'Roboto', sans-serif;
-      background-color: #f0f0f0;
+      background-color: #fafafa;  /* Always light */
       color: #333;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
-    }
-    @media (prefers-color-scheme: dark) {
-      body {
-        background-color: #121212;
-        color: #ffffff;
-      }
     }
 
     /* Phone screen container */
@@ -99,24 +92,22 @@
       border-radius: 40px;
       overflow: hidden;
       background-color: #ffffff;
+      /* Futuristic subtle gradient background (optional) */
+      background: linear-gradient(135deg, #ffffff 20%, #f0f3f7 120%);
       box-shadow: 0 4px 20px rgba(0,0,0,0.1);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
     }
-    @media (prefers-color-scheme: dark) {
-      .phone-screen {
-        background-color: #1e1e1e;
-        box-shadow: 0 4px 20px rgba(255,255,255,0.1);
-      }
-    }
 
-    /* Grid of icons (Home Screen) */
+    /* Grid of icons (Home Screen) - 3 wide x 4 tall */
     .home-grid {
       flex: 1;
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-gap: 20px;
+      grid-template-columns: repeat(3, 1fr);
+      /* The # of rows will auto-fit to 12 items */
+      row-gap: 30px;
+      column-gap: 20px;
       padding: 40px 20px;
       justify-items: center;
       align-content: center;
@@ -135,9 +126,9 @@
 
     /* The icon (circle background to mimic iOS style) */
     .icon-circle {
-      width: 64px;
-      height: 64px;
-      border-radius: 16px;
+      width: 68px;
+      height: 68px;
+      border-radius: 20px;
       background-color: #ededed;
       display: flex;
       align-items: center;
@@ -145,31 +136,61 @@
       margin-bottom: 8px;
       transition: background-color 0.2s ease, transform 0.2s ease;
     }
-    @media (prefers-color-scheme: dark) {
-      .icon-circle {
-        background-color: #333;
-      }
-    }
     .icon-circle:hover {
-      transform: scale(1.05);
+      transform: scale(1.07);
       background-color: #ddd;
     }
 
     /* Ionicon size */
     .icon-circle ion-icon {
-      font-size: 32px;
-      color: #555;
+      font-size: 36px;
+      color: #fff; /* We'll override color per icon with backgrounds */
     }
-    @media (prefers-color-scheme: dark) {
-      .icon-circle ion-icon {
-        color: #aaa;
-      }
+
+    /* Each icon with its own background color (feel free to tweak) */
+    .icon-phone .icon-circle {
+      background-color: #2ecc71; /* green */
+    }
+    .icon-sms .icon-circle {
+      background-color: #f39c12; /* orange */
+    }
+    .icon-email .icon-circle {
+      background-color: #3498db; /* blue */
+    }
+    .icon-chat .icon-circle {
+      background-color: #9b59b6; /* purple */
+    }
+    .icon-faq .icon-circle {
+      background-color: #95a5a6; /* gray */
+    }
+    .icon-discord .icon-circle {
+      background-color: #5865F2; /* official Discord color */
+    }
+    .icon-instagram .icon-circle {
+      /* Instagram gradient example */
+      background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    }
+    .icon-facebook .icon-circle {
+      background-color: #3b5998; /* official FB color */
+    }
+    .icon-x .icon-circle {
+      background-color: #1da1f2; /* Twitter's color (old brand) */
+    }
+    .icon-whatsapp .icon-circle {
+      background-color: #25D366; /* official WhatsApp green */
+    }
+    .icon-video .icon-circle {
+      background-color: #e74c3c; /* red / camera */
+    }
+    .icon-palette .icon-circle {
+      background-color: #f1c40f; /* yellow */
     }
 
     /* App label */
     .app-label {
       text-align: center;
-      margin-top: 2px;
+      margin-top: 4px;
+      color: #555;
     }
 
     /* Footer "dock" area */
@@ -180,13 +201,8 @@
       justify-content: center;
       font-weight: 500;
       border-top: 1px solid rgba(0,0,0,0.1);
-      background-color: #fafafa;
-    }
-    @media (prefers-color-scheme: dark) {
-      .dock {
-        background-color: #2e2e2e;
-        border-top: 1px solid rgba(255,255,255,0.1);
-      }
+      background-color: #fefefe;
+      color: #333;
     }
   </style>
 </head>
@@ -196,37 +212,102 @@
     
     <!-- Main icons grid -->
     <div class="home-grid">
-      <!-- Call Icon -->
-      <a class="app-icon" href="tel:+1234567890">
+      
+      <!-- 1: Phone -->
+      <a class="app-icon icon-phone" href="tel:+1234567890">
         <div class="icon-circle">
           <ion-icon name="call-outline"></ion-icon>
         </div>
         <span class="app-label">Call</span>
       </a>
 
-      <!-- SMS Icon -->
-      <a class="app-icon" href="sms:+1234567890">
+      <!-- 2: SMS -->
+      <a class="app-icon icon-sms" href="sms:+1234567890">
         <div class="icon-circle">
           <ion-icon name="chatbubble-outline"></ion-icon>
         </div>
         <span class="app-label">Message</span>
       </a>
 
-      <!-- Email Icon -->
-      <a class="app-icon" href="mailto:example@email.com">
+      <!-- 3: Email -->
+      <a class="app-icon icon-email" href="mailto:someone@example.com">
         <div class="icon-circle">
           <ion-icon name="mail-outline"></ion-icon>
         </div>
         <span class="app-label">Email</span>
       </a>
 
-      <!-- Chat (Browser) Icon -->
-      <div class="app-icon" id="openChat">
+      <!-- 4: Chat (Browser) -->
+      <div class="app-icon icon-chat" id="openChat">
         <div class="icon-circle">
           <ion-icon name="globe-outline"></ion-icon>
         </div>
         <span class="app-label">Chat</span>
       </div>
+
+      <!-- 5: FAQ -->
+      <a class="app-icon icon-faq" href="javascript:void(0)">
+        <div class="icon-circle">
+          <ion-icon name="help-circle-outline"></ion-icon>
+        </div>
+        <span class="app-label">FAQ</span>
+      </a>
+
+      <!-- 6: Discord -->
+      <a class="app-icon icon-discord" href="https://discord.com" target="_blank">
+        <div class="icon-circle">
+          <ion-icon name="logo-discord"></ion-icon>
+        </div>
+        <span class="app-label">Discord</span>
+      </a>
+
+      <!-- 7: Instagram -->
+      <a class="app-icon icon-instagram" href="https://instagram.com" target="_blank">
+        <div class="icon-circle">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </div>
+        <span class="app-label">Instagram</span>
+      </a>
+
+      <!-- 8: Facebook -->
+      <a class="app-icon icon-facebook" href="https://facebook.com" target="_blank">
+        <div class="icon-circle">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </div>
+        <span class="app-label">Facebook</span>
+      </a>
+
+      <!-- 9: X (Twitter) -->
+      <a class="app-icon icon-x" href="https://twitter.com" target="_blank">
+        <div class="icon-circle">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </div>
+        <span class="app-label">X</span>
+      </a>
+
+      <!-- 10: WhatsApp -->
+      <a class="app-icon icon-whatsapp" href="https://wa.me/1234567890" target="_blank">
+        <div class="icon-circle">
+          <ion-icon name="logo-whatsapp"></ion-icon>
+        </div>
+        <span class="app-label">WhatsApp</span>
+      </a>
+
+      <!-- 11: Video Camera -->
+      <a class="app-icon icon-video" href="javascript:void(0)">
+        <div class="icon-circle">
+          <ion-icon name="videocam-outline"></ion-icon>
+        </div>
+        <span class="app-label">Video</span>
+      </a>
+
+      <!-- 12: Paint Palette -->
+      <a class="app-icon icon-palette" href="javascript:void(0)">
+        <div class="icon-circle">
+          <ion-icon name="color-palette-outline"></ion-icon>
+        </div>
+        <span class="app-label">Paint</span>
+      </a>
     </div>
 
     <!-- Dock -->
