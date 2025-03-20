@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
   <meta name="theme-color" content="#FFFFFF" />
-  <title>Futuristic Phone-Like PWA</title>
+  <title>Joone</title>
 
   <!-- 
     NOTE:
@@ -72,33 +72,18 @@
       padding: 0;
       box-sizing: border-box;
     }
-    body {
-      font-family: 'Roboto', sans-serif;
-      background-color: #fafafa;  /* Always light */
-      color: #333;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
+    
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #fafafa; /* Always light */
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* ensures full vertical space */
+}
 
-    /* Phone screen container */
-    .phone-screen {
-      width: 100%;
-      max-width: 420px;
-      height: 700px; /* approximate phone height */
-      margin: auto;
-      position: relative;
-      border-radius: 40px;
-      overflow: hidden;
-      background-color: #ffffff;
-      /* Futuristic subtle gradient background (optional) */
-      background: linear-gradient(135deg, #ffffff 20%, #f0f3f7 120%);
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
 
     /* Grid of icons (Home Screen) - 3 wide x 4 tall */
     .home-grid {
@@ -207,9 +192,7 @@
   </style>
 </head>
 <body>
-
-  <div class="phone-screen">
-    
+  
     <!-- Main icons grid -->
     <div class="home-grid">
       
@@ -314,10 +297,7 @@
     <div class="dock">
       Joone
     </div>
-  </div>
 
-  <!-- Botpress script (Chat) -->
-  <script src="https://unpkg.com/@botpress/webchat/bundle.umd.js"></script>
   <script>
     // Register the manifest at runtime
     (function registerManifest() {
@@ -341,15 +321,6 @@
         .catch(err => console.error('Service Worker Registration Failed: ', err));
     }
 
-    // Botpress Chat initialization
-    document.getElementById('openChat').addEventListener('click', () => {
-      window.botpressWebChat.init({
-        botId: 'YOUR_BOT_ID',
-        host: 'YOUR_BOTPRESS_URL',
-        showPoweredBy: false
-      });
-      window.botpressWebChat.show();
-    });
   </script>
 
 </body>
